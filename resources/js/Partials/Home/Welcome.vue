@@ -59,15 +59,29 @@
             <Link :href="route('public.about')"
                 class="flex rounded-md shadow items-center justify-center px-10 py-3 border border-transparent text-base font-medium text-white bg-brand-primary hover:bg-brand-primary-400">
             <span>Das sind wir</span>
-            <ArrowRightCircleIcon class="h-7 ml-3" />
+            <ArrowRightIcon class="h-7 ml-3" />
             </Link>
         </div>
     </section>
 </template>
 <script>
-import { ArrowRightCircleIcon, BookOpenIcon, BuildingLibraryIcon, HandRaisedIcon, HeartIcon } from '@heroicons/vue/24/outline'
+import {
+    ArrowRightIcon,
+    BookOpenIcon,
+    BuildingLibraryIcon,
+    HandRaisedIcon,
+    HeartIcon
+} from '@heroicons/vue/24/outline'
 
 export default {
+    components: {
+        ArrowRightIcon,
+        BookOpenIcon,
+        BuildingLibraryIcon,
+        HandRaisedIcon,
+        HeartIcon
+    },
+
     data() {
         return {
             welcomeItems: [
