@@ -103,7 +103,7 @@ const contactDetails = [
         name: 'Schreiben Sie uns',
         detail: 'office@fcg-villach.at',
         href: 'mailto:office@fcg-villach.at',
-        description: 'Sollten Sie Fragen, Anliegen oder Wünsche haben, beantworten wir gern alle Ihre Fragen.',
+        description: 'Sollten Sie Fragen, Anliegen oder Wünsche haben, beantworten wir gern alles.',
         icon: EnvelopeIcon,
         ctaText: 'Schreiben',
     },
