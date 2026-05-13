@@ -24,7 +24,7 @@
             <h2>Welche personenbezogenen Daten wir sammeln</h2>
 
             <h3> Analysedienste</h3>
-            <p>Wir verwenden keine Analysedienste.</p>
+            <p>Wir verwenden Google Analytics, um Informationen über die Nutzung unserer Website zu sammeln. Diese Informationen werden anonymisiert verarbeitet, um die Benutzererfahrung zu verbessern.</p>
             <h3> Bilder </h3>
             <p>Bilder auf dieser Webseite unterliegen keiner Lizenz. Sie stammen aus der Online Bilderbibliothek <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></p>
             <h3>Ihre Rechte</h3>
