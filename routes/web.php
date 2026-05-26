@@ -1,9 +1,8 @@
 <?php
 
 use Inertia\Inertia;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PostController;
@@ -61,3 +60,6 @@ Route::fallback(function () {
     return Inertia::render('PageNotFound');
 });
 
+Route::middleware('auth')->get('/heartbeat', function () {
+    return response()->noContent();
+});
