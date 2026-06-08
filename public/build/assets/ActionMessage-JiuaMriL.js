@@ -1,0 +1,2 @@
+import{d as s,b as t,w as o,p as n,a as r,r as c,x as i,T as l,o as d}from"./app-DMvafWff.js";const p={class:"text-sm text-gray-600"},m={__name:"ActionMessage",props:{on:Boolean},setup(e){return(a,_)=>(d(),s("div",null,[t(l,{"leave-active-class":"transition ease-in duration-1000","leave-from-class":"opacity-100","leave-to-class":"opacity-0"},{default:o(()=>[n(r("div",p,[c(a.$slots,"default")],512),[[i,e.on]])]),_:3})]))}};export{m as _};
+//# sourceMappingURL=ActionMessage-JiuaMriL.js.map
