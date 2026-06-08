@@ -183,11 +183,11 @@
                     <div v-if="posts.total > 0"
                         class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
                         <div class="flex-1 flex justify-between sm:hidden">
-                            <Link preserve-scroll :disabled="posts.prev_page_url" :href="posts.prev_page_url"
+                            <Link preserve-scroll  v-if="posts.prev_page_url" :disabled="posts.prev_page_url" :href="posts.prev_page_url"
                                 class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
                             Zurück
                             </Link>
-                            <Link preserve-scroll :disabled="posts.next_page_url" :href="posts.next_page_url"
+                            <Link preserve-scroll v-if="posts.next_page_url" :disabled="posts.next_page_url" :href="posts.next_page_url"
                                 class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
                             Weiter
                             </Link>
@@ -214,7 +214,7 @@
                                     <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                                         aria-label="Pagination">
 
-                                        <Link preserve-scroll :disabled="posts.prev_page_url"
+                                        <Link preserve-scroll v-if="posts.prev_page_url" :disabled="posts.prev_page_url"
                                             :href="posts.prev_page_url"
                                             class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
                                         <span class="sr-only">Zurück</span>
@@ -223,14 +223,14 @@
 
                                         <template v-for="link in posts.links">
                                             <Link preserve-scroll :disabled="!link.url" :href="link.url"
-                                                v-if="!isNaN(link.label)" :key="link.url + link.label"
+                                                v-if="link.url && !isNaN(link.label)" :key="link.url + link.label"
                                                 :class="[link.active ? 'z-10 bg-brand-primary-50 border-brand-primary-500 text-brand-primary-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50', 'text-base font-medium ']"
                                                 class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50  relative items-center px-4 py-2 border text-sm font-medium">
                                             {{ link.label }}
                                             </Link>
                                         </template>
 
-                                        <Link preserve-scroll :disabled="posts.next_page_url"
+                                        <Link v-if="posts.next_page_url" preserve-scroll :disabled="posts.next_page_url"
                                             :href="posts.next_page_url"
                                             class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
                                         <span class="sr-only">Weiter</span>
