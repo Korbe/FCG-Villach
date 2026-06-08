@@ -7,7 +7,6 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import VueClipboard from 'vue-clipboard2'
 import VueSmoothScroll from 'vue3-smooth-scroll'
-import './session-heartbeat'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 

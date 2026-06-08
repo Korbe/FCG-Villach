@@ -60,6 +60,6 @@ Route::fallback(function () {
     return Inertia::render('PageNotFound');
 });
 
-Route::middleware('auth')->get('/heartbeat', function () {
-    return response()->noContent();
-});
+// Route::middleware('auth')->get('/heartbeat', function () {
+//     return response()->noContent();
+// });
