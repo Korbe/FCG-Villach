@@ -5,9 +5,9 @@
 
         <welcome />
 
-        <visit-us />
-
         <news :items="news" />
+
+        <visit-us />
 
         <Events />
 
