@@ -108,15 +108,6 @@ const events = [
         mail: "chritian.korbitsch@fcg-villach.at"
     },
     {
-        name: "Hauskreis Bettina",
-        interval: "Jeden Freitag außer den ersten im Monat",
-        time: "9 Uhr",
-        description: "",
-        responsible: "Bettina Morgan",
-        phone: "+436502200404",
-        mail: "bettina.morgan@fcg-villach.at"
-    },
-    {
         name: "Gebet & Seelsorge",
         interval: "Auf Anfrage",
         time: "Jederzeit",

@@ -62,11 +62,6 @@ const team = [
         imageUrl: '/images/portraits/Tochukwu-Udeh.jpg',
     },
     {
-        name: 'Bettina Morgan',
-        role: 'Moderation',
-        imageUrl: '/images/portraits/Bettina-Morgan.jpg',
-    },
-    {
         name: 'Majid Khosravian',
         role: 'Übersetzer',
         imageUrl: 'images/portraits/Majid-Khosravian.jpg',
