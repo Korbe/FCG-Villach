@@ -36,21 +36,13 @@ createInertiaApp({
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', async function () {
         try {
-            // 1️⃣ Alle alten Service Worker holen
-            const registrations = await navigator.serviceWorker.getRegistrations();
-
-            // 2️⃣ Alle alten SW de-registrieren
-            for (const reg of registrations) {
-                console.log('Unregistering old SW:', reg.scope);
-                await reg.unregister();
-            }
-
-            // 3️⃣ Neuen Service Worker registrieren
             const reg = await navigator.serviceWorker.register('/service-worker.js', {
                 scope: '/'
             });
-            console.log('Service Worker registered!', reg.scope);
 
+            // Regelmäßig auf ein neues Service-Worker-Skript prüfen, damit
+            // Updates zeitnah ankommen, ohne bei jedem Laden neu zu registrieren.
+            reg.update();
         } catch (err) {
             console.error('Service Worker registration failed:', err);
         }
