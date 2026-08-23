@@ -95,7 +95,7 @@
 
                             <div class="bg-gray-200 bg-opacity-25 flex flex-row-reverse">
                                 <div class="p-6">
-                                    <JetButton>Erstellen</JetButton>
+                                    <JetButton :disabled="form.processing">Erstellen</JetButton>
                                 </div>
                             </div>
                         </div>
