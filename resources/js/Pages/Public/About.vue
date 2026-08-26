@@ -11,7 +11,7 @@
             </p>
 
             <div class="flex justify-center mt-10">
-                <img src="/images/team.jpg" class="shadow-xl rounded-xl object-cover h-60 sm:h-96 md:h-[36rem]" />
+                <img src="/images/team.png" class="shadow-xl rounded-xl object-cover h-60 sm:h-96 md:h-[36rem]" />
             </div>
         </div>
 
