@@ -1,4 +1,4 @@
-const VERSION = 'v3';
+const VERSION = 'v4';
 const PRECACHE = `fcg-villach-precache-${VERSION}`;
 const RUNTIME = `fcg-villach-runtime-${VERSION}`;
 

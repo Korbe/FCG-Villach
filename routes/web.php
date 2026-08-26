@@ -57,5 +57,14 @@ Route::name('dashboard.')->middleware(['auth:sanctum', 'verified'])->group(funct
 
 
 Route::fallback(function () {
+    // Fehlende Build-Assets (z.B. nach einem Deploy gelöschte, alte
+    // gehashte Dateien aus einem gecachten Browser-/Service-Worker-Stand)
+    // sollen ein echtes 404 liefern statt der vollen Inertia-HTML-Seite,
+    // sonst bricht das Laden von <script type="module"> mit einem
+    // MIME-Type-Fehler ab.
+    if (request()->is('build/*')) {
+        abort(404);
+    }
+
     return Inertia::render('PageNotFound');
 });
