@@ -4,9 +4,6 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 
-//Before deployment!!!
-//Build the project and commit it
-
 // Config
 
 set('repository', 'https://github.com/Korbe/fcg-vih-webapp.git');
@@ -37,6 +34,19 @@ task('composer:install', function () {
     run('/home/u599789838/bin/composer install');
 });
 
+// Server has no Node.js, so assets are built locally and shipped up via scp
+// (the server also has no rsync, so Deployer's built-in upload() can't be used).
+task('deploy:build', function () {
+    runLocally('npm run build');
+})->desc('Build frontend assets locally');
+
+task('deploy:upload_build', function () {
+    $host = currentHost();
+    $port = $host->getPort() ?? 22;
+    $connection = $host->connectionString();
+    runLocally("scp -P {$port} -r public/build {$connection}:{{release_path}}/public/build");
+})->desc('Upload built assets via scp');
+
 task('deploy:storageSymlink', function () {
     run('ln -sfn {{deploy_path}}/../storage {{release_path}}/storage');
     run('ln -sfn {{release_path}}/storage/app/public {{release_path}}/public/storage');
@@ -60,7 +70,9 @@ task('deploy:restart_caches', function () {
 
 
 // Hooks
+before('deploy:update_code', 'deploy:build');
 after('deploy:update_code', 'composer:install');
+after('deploy:update_code', 'deploy:upload_build');
 after('deploy:shared', 'deploy:envSymlink');
 after('deploy:envSymlink', 'deploy:storageSymlink');
 after('deploy:storageSymlink', 'deploy:restart_caches');
