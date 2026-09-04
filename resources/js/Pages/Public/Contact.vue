@@ -32,10 +32,10 @@
                         <h2 class="sr-only">Kontaktieren Sie uns</h2>
                         <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
                             <div v-for="contactDetail in contactDetails" :key="contactDetail.name"
-                                class="flex flex-col bg-white rounded-2xl shadow-xl">
+                                class="flex flex-col bg-white rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                                 <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                                     <div
-                                        class="absolute top-0 p-5 inline-block bg-brand-primary-600 rounded-xl shadow-lg transform -translate-y-1/2">
+                                        class="absolute top-0 p-5 inline-block bg-brand-primary-600 rounded-xl shadow-lg shadow-brand-primary-500/30 transform -translate-y-1/2">
                                         <component :is="contactDetail.icon" aria-hidden="true"
                                             class="h-6 w-6 text-white" />
                                     </div>
@@ -45,35 +45,36 @@
                                 </div>
                                 <div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
                                     <a :href="contactDetail.href"
-                                        class="text-base font-medium text-brand-primary-700 hover:text-brand-primary-600"
+                                        class="inline-flex items-center text-base font-medium text-brand-primary-700 hover:text-brand-primary-600 group"
                                         rel="noopener noreferrer" target="_blank">{{
                                             contactDetail.ctaText
-                                        }}<span aria-hidden="true"> &rarr;</span></a>
+                                        }}<span aria-hidden="true" class="ml-1 transition-transform group-hover:translate-x-1">&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
 
                         <!--Gmaps Card-->
-                        <div class="w-full shadow-xl mt-4 sm:mt-6 lg:mt-8 mb-8 rounded-2xl">
+                        <div class="w-full shadow-xl mt-4 sm:mt-6 lg:mt-8 mb-8 rounded-2xl overflow-hidden">
                             <div
                                 class="flex-1 w-full h-full relative map-responsive pb-[120%] sm:pb-[50%] md:pb-[50%] lg:pb-[30%] xl:pb-[30%] 2xl:pb-[30%]">
 
 
-                                <iframe allowfullscreen class="rounded-tl-2xl rounded-tr-2xl" height="100%"
+                                <iframe allowfullscreen height="100%"
                                     loading="lazy"
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2740.0343905297646!2d13.8433933!3d46.6260827!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477081c082b8e4f7%3A0xce20ee88b28b7a1!2sFreie%20Christengemeinde%20%2F%20Pfingstgemeinde!5e0!3m2!1sde!2sat!4v1658674190571!5m2!1sde!2sat"
                                     style="border: 0" width="100%"></iframe>
                             </div>
-                            <div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                                <a class="text-base font-medium text-brand-primary-700 hover:text-brand-primary-600"
-                                    href="#" rel="noopener noreferrer" target="_blank">Google Maps<span
-                                        aria-hidden="true"> &rarr;</span></a>
+                            <div class="p-6 bg-gray-50 md:px-8">
+                                <a class="inline-flex items-center text-base font-medium text-brand-primary-700 hover:text-brand-primary-600 group"
+                                    href="https://goo.gl/maps/fDxswRLhh9dfKHUZ8" rel="noopener noreferrer" target="_blank">Google Maps<span
+                                        aria-hidden="true" class="ml-1 transition-transform group-hover:translate-x-1">&rarr;</span></a>
                             </div>
 
                         </div>
 
-                        <div class="bg-white p-5 mb-10 rounded-2xl shadow-xl text-gray-800">
-                            <p>Sollte unser Parkplatz bereits voll sein, finden Sie einen Ausweichparkplatz gegenüber dem Supermarkt T&G.</p>
+                        <div class="bg-white p-5 mb-10 rounded-2xl shadow-xl text-gray-800 flex items-start gap-3">
+                            <InformationCircleIcon class="h-6 w-6 text-brand-primary flex-shrink-0" />
+                            <p>Sollte unser Parkplatz bereits voll sein, finden Sie einen Ausweichparkplatz gegenüber dem Supermarkt T&amp;G.</p>
                         </div>
 
                     </section>
@@ -86,7 +87,7 @@
 </template>
 
 <script setup>
-import { MapPinIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
+import { MapPinIcon, EnvelopeIcon, PhoneIcon, InformationCircleIcon } from "@heroicons/vue/24/outline";
 import Navbar from "@/Partials/Navbar.vue";
 import PublicLayout from "@/Layouts/PublicLayout.vue";
 

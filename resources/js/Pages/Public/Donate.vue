@@ -11,7 +11,10 @@
 
                 <div>
                     <div class="text-center mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 px-5">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="inline-flex items-center rounded-full bg-brand-secondary-50 px-4 py-1.5 text-sm font-semibold text-brand-secondary-800">
+                            Gemeinsam wirken
+                        </span>
+                        <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                             Ihre Spende <span class="text-brand-primary">hilft</span>
                         </h1>
                         <p
@@ -23,9 +26,10 @@
                         </p>
                     </div>
 
-                    <div class="max-w-3xl mx-auto px-5 my-12 lg:my-14 lg:my-20 grid md:grid-cols-2 gap-4">
+                    <div class="max-w-3xl mx-auto px-5 my-12 lg:my-14">
+                        <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 p-6 sm:p-8 grid md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-medium font-medium text-gray-700"
+                            <label class="block text-sm font-medium text-gray-700"
                                 for="card_holder">Kontoinhaber</label>
                             <div class="mt-1 relative rounded-md shadow-sm">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -33,10 +37,10 @@
                                 </div>
 
                                 <input id="card_holder" :value="card_holder"
-                                    class="cursor-pointer focus:ring-brand-primary focus:border-brand-primary block w-full pl-10 pr-10 text-medium border-gray-300 rounded-md"
+                                    class="cursor-pointer focus:ring-brand-primary focus:border-brand-primary block w-full pl-10 pr-10 text-medium border-gray-300 rounded-md transition-shadow"
                                     readonly type="text" @click="copyHolder($event, card_holder)" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <span class="inline-block bg-gray-900 text-white rounded px-2 mr-2">{{
+                                    <span v-if="copyHolderText" class="inline-block bg-gray-900 text-white text-sm rounded px-2 mr-2">{{
                                         copyHolderText
                                     }}</span>
                                     <DocumentDuplicateIcon aria-hidden="true" class="h-5 w-5 text-gray-400" />
@@ -45,22 +49,23 @@
                         </div>
 
                         <div>
-                            <label class="block text-medium font-medium text-gray-700" for="card_iban">IBAN</label>
+                            <label class="block text-sm font-medium text-gray-700" for="card_iban">IBAN</label>
                             <div class="mt-1 relative rounded-md shadow-sm">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <CreditCardIcon aria-hidden="true" class="h-5 w-5 text-brand-secondary" />
                                 </div>
 
                                 <input id="card_iban" :value="card_iban"
-                                    class="cursor-pointer focus:ring-brand-secondary focus:border-brand-secondary block w-full pl-10 pr-10 text-medium border-gray-300 rounded-md"
+                                    class="cursor-pointer focus:ring-brand-secondary focus:border-brand-secondary block w-full pl-10 pr-10 text-medium border-gray-300 rounded-md transition-shadow"
                                     readonly type="text" @click="copyIban($event, card_iban)" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <span class="inline-block bg-gray-900 text-white rounded px-2 mr-2">{{
+                                    <span v-if="copyIbanText" class="inline-block bg-gray-900 text-white text-sm rounded px-2 mr-2">{{
                                         copyIbanText
                                     }}</span>
                                     <DocumentDuplicateIcon aria-hidden="true" class="h-5 w-5 text-gray-400" />
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
 
@@ -82,10 +87,10 @@
                                     </figure>
                                 </div>
                             </div>
-                            <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
+                            <div class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
                                 <div v-for="org in organizations" :key="org.name"
-                                    class="col-span-1 flex justify-center py-8 px-8">
-                                    <a :href="org.link" target="_blank">
+                                    class="col-span-1 flex justify-center items-center py-8 px-8 rounded-2xl bg-white shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <a :href="org.link" target="_blank" rel="noopener noreferrer" :title="org.name">
                                         <img loading="lazy" :alt="org.name" :src="org.logo" class="max-h-12" />
                                     </a>
                                 </div>

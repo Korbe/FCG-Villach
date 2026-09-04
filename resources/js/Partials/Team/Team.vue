@@ -4,11 +4,11 @@
             <ul role="list"
                 class="space-y-12 sm:space-y-0 sm:space-x-0 sm:grid sm:grid-cols-2 sm:gap-6  lg:grid-cols-3 lg:gap-12">
                 <li v-for="person in team" :key="person.name"
-                    class="rounded-lg text-left bg-white shadow hover:shadow-lg divide-y divide-gray-200">
+                    class="group rounded-2xl text-left bg-white shadow-sm ring-1 ring-gray-900/5 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <Link :href="route('public.about.team', slugify(person.name))">
                     <div>
-                        <div class="aspect-w-1 aspect-h-1">
-                            <img loading="lazy" class="object-cover shadow-lg rounded-t-lg" :src="person.imageUrl"
+                        <div class="aspect-w-1 aspect-h-1 overflow-hidden">
+                            <img loading="lazy" class="object-cover transition-transform duration-500 group-hover:scale-105" :src="person.imageUrl"
                                 :alt="person.name" />
                         </div>
                         <div class="p-5 flex items-center justify-between">
@@ -17,7 +17,7 @@
                                 <p class="text-brand-primary">{{ person.role }}</p>
                             </div>
                             <div>
-                                <ArrowRightIcon class="w-6 h-6 text-gray-400" />
+                                <ArrowRightIcon class="w-6 h-6 text-gray-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-primary" />
                             </div>
                         </div>
                     </div>

@@ -44,15 +44,23 @@
         </div>
 
         <div id="posts" class="bg-gradient-to-b from-white to-gray-100">
-            <div class="max-w-4xl mx-auto py-32 px-4">
+            <div class="max-w-4xl mx-auto py-24 sm:py-32 px-4">
+
+                <div class="text-center mb-12">
+                    <span class="inline-flex items-center rounded-full bg-brand-primary-50 px-4 py-1.5 text-sm font-semibold text-brand-primary-700">
+                        Zuletzt gepredigt
+                    </span>
+                    <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Neueste Predigten</h2>
+                </div>
 
                 <div class="grid grid-cols-1 gap-6">
                     <post-audio-player v-for="(post, index) in posts" :key="index" :index="index" :post="post" />
 
                     <!--empty state-->
                     <div v-if="posts.length === 0"
-                        class="text-center rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm hover:border-brand-primary focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-brand-primary">
-                        Keine Öffentlichen Prediten
+                        class="flex flex-col items-center text-center rounded-2xl border-2 border-dashed border-gray-300 bg-white px-6 py-16">
+                        <MicrophoneIcon class="h-10 w-10 text-gray-300" />
+                        <p class="mt-4 text-gray-500">Aktuell sind keine öffentlichen Predigten verfügbar.</p>
                     </div>
 
                 </div>
@@ -72,7 +80,7 @@
 <script setup>
 import PublicLayout from "@/Layouts/PublicLayout.vue";
 import Navbar from "@/Partials/Navbar.vue";
-import { ListBulletIcon, PlayIcon } from "@heroicons/vue/24/outline";
+import { ListBulletIcon, PlayIcon, MicrophoneIcon } from "@heroicons/vue/24/outline";
 import PostAudioPlayer from "@/Partials/PostAudioPlayer.vue";
 
 defineProps({

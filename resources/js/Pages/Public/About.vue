@@ -3,7 +3,10 @@
         <Navbar/>
 
         <div class="bg-white text-center mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 px-5">
-            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="inline-flex items-center rounded-full bg-brand-primary-50 px-4 py-1.5 text-sm font-semibold text-brand-primary-700">
+                Unser Leiterteam
+            </span>
+            <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 Das sind <span class="text-brand-primary">wir</span>
             </h1>
             <p class="mt-3 text-xl text-gray-500 max-w-5xl lg:max-w-4xl mx-auto sm:text-lg md:mt-5 md:text-xl">
@@ -11,11 +14,9 @@
             </p>
 
             <div class="flex justify-center mt-10">
-                <img src="/images/team.png" class="shadow-xl rounded-xl object-cover h-60 sm:h-96 md:h-[36rem]" />
+                <img src="/images/team.png" class="ring-1 ring-gray-900/10 shadow-2xl rounded-2xl object-cover h-60 sm:h-96 md:h-[36rem]" />
             </div>
         </div>
-
-        
 
         <div class="bg-white sm:text-center mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 px-5">
             <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl">
@@ -43,68 +44,43 @@
                         <h2 class="leading-6 text-brand-primary font-semibold tracking-wide uppercase">Freie Christengemeinde Villach</h2>
                         <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Das glauben wir</h3>
 
-                        <div class="mt-5 prose prose-lg prose-a:text-brand-primary text-gray-500">
-
-
-                            <ul role="list">
-                                <li><b class="text-brand-primary">Wir glauben</b>, dass der Gott der Bibel als Schöpfer des Himmels und der Erde, Ursprung und Vollender allen Lebens ist und sich uns
+                        <div class="mt-6 space-y-4">
+                            <div class="rounded-xl bg-gray-50 p-5">
+                                <p class="text-gray-600"><b class="text-brand-primary">Wir glauben</b>, dass der Gott der Bibel als Schöpfer des Himmels und der Erde, Ursprung und Vollender allen Lebens ist und sich uns
                                     Menschen als dreieiniger Gott, als Vater, Sohn und Heiliger Geist offenbart. Wir nehmen dieses Wissen aus der Bibel, die von Gottes Geist inspirierte Heilige
                                     Schrift. Sie ist die Richtschnur unseres Glaubens und unseres Handelns und ist die Grundlage unserer Verkündigung des Evangeliums.
-                                </li>
-                                <li><b class="text-brand-primary">Wir glauben</b>, dass Jesus Christus als Sohn Gottes für unser Heil Mensch geworden ist; gezeugt vom Heiligen Geist und geboren von
+                                </p>
+                            </div>
+                            <div class="rounded-xl bg-gray-50 p-5">
+                                <p class="text-gray-600"><b class="text-brand-primary">Wir glauben</b>, dass Jesus Christus als Sohn Gottes für unser Heil Mensch geworden ist; gezeugt vom Heiligen Geist und geboren von
                                     der Jungfrau Maria. Mit seinem Leben und Wirken hat er uns gezeigt, wie wirkliches Leben ausschaut. Durch seinen Tod am Kreuz nahm er alle Sünden der Menschheit auf
                                     sich und durch seine Auferstehung und bietet er jedem Menschen der daran glaubt, Versöhnung mit Gott und ewiges Leben.
-                                </li>
-                                <li><b class="text-brand-primary">Wir glauben</b>, dass der Heilige Geist durch den Glauben an Jesus Christus im Gläubigen neues Leben schafft, als göttlicher Beistand
+                                </p>
+                            </div>
+                            <div class="rounded-xl bg-gray-50 p-5">
+                                <p class="text-gray-600"><b class="text-brand-primary">Wir glauben</b>, dass der Heilige Geist durch den Glauben an Jesus Christus im Gläubigen neues Leben schafft, als göttlicher Beistand
                                     in dem Menschen wohnt und zu einem Gott wohlgefälligen Leben befähigt. Zudem rüstet der Heilige Geist die Gemeinde mit Kraft und übernatürliche Gaben aus, so dass
                                     das Leben Christi in der Gemeinde wenigstens ansatzweise gelebt werden kann.
-                                </li>
-                                <li><b class="text-brand-primary">Wir glauben</b>, dass die Ortsgemeinde, als eine lokale Lebens-, Glaubens- und Dienstgemeinschaft, das von Gott gesetzte geistliche
+                                </p>
+                            </div>
+                            <div class="rounded-xl bg-gray-50 p-5">
+                                <p class="text-gray-600"><b class="text-brand-primary">Wir glauben</b>, dass die Ortsgemeinde, als eine lokale Lebens-, Glaubens- und Dienstgemeinschaft, das von Gott gesetzte geistliche
                                     Zuhause aller Glaubenden ist. Mit der Taufe werden die Gläubigen aufgrund ihres persönlichen Bekenntnisses der Sündenvergebung und Glaubens an Jesus Christus zur
                                     Gemeinde hinzugetan. Im Abendmahl, als Gedächtnismahl und Zeichen der Gemeinschaft und Teilhabe an ihrem Herrn Jesus Christus, verkündet die Gemeinde den Tod und
                                     die Auferstehung Jesu in Erwartung seiner Wiederkunft in Kraft und Herrlichkeit.
-                                </li>
-                            </ul>
-                            <p>
+                                </p>
+                            </div>
+                            <p class="text-gray-500">
                                 Detaillierte formulierte lehrmäßige Grundlagen können sie
-                                <a target="_blank" href="http://www.fcgoe.at/images/ueber_uns/lehrmaessige_grundlagen2013-04.pdf">hier</a> downloaden.
+                                <a class="text-brand-primary font-medium hover:text-brand-primary-700" target="_blank" href="http://www.fcgoe.at/images/ueber_uns/lehrmaessige_grundlagen2013-04.pdf">hier</a> downloaden.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr>
         </div>
 
-        <div class="relative py-16 mt-16 bg-white overflow-hidden">
-            <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
-                <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
-                    <svg class="absolute top-64 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-                        <defs>
-                            <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"/>
-                    </svg>
-                    <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-                        <defs>
-                            <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"/>
-                    </svg>
-                    <svg class="absolute bottom-32 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-                        <defs>
-                            <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"/>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"/>
-                    </svg>
-                </div>
-            </div>
+        <div class="relative py-16 mt-16 bg-gray-50 overflow-hidden">
             <div class="relative px-4 sm:px-6 lg:px-8">
                 <div class="text-lg max-w-prose mx-auto">
                     <h1 id="freie-christengemeinde" style="scroll-margin: 7rem">
@@ -112,7 +88,8 @@
                     </h1>
                     <p class="mt-8 text-xl text-gray-500 leading-8">Als Freie Christengemeinde – Pfingstgemeinde ist es uns ein Anliegen, den Menschen in unserem Land zu dienen, indem wir die gute Nachricht von Jesus Christus gesellschaftsrelevant verkündigen und praktizieren.</p>
                 </div>
-                <div class="mt-6 prose prose-a:text-brand-primary prose-lg text-gray-500 mx-auto">
+                <div class="mt-10 max-w-prose mx-auto rounded-2xl bg-white shadow-sm ring-1 ring-gray-900/5 px-6 py-8 sm:px-10">
+                <div class="prose prose-a:text-brand-primary prose-lg text-gray-500 mx-auto">
                     <p>Durch attraktive, lebendige Ortsgemeinden soll allen Menschen die Hoffnung des Lebens nahegebracht werden. Es ist uns wichtig, die junge Generation zu erreichen und sie für eine tragfähige Zukunft auszurüsten. Als Kirchenbewegung sehen wir auch einen Auftrag im weltweiten Sozial- und Entwicklungshilfedienst.
                     </p>
                     <p>
@@ -151,6 +128,7 @@
 
                     <h3 class="h3">Entstehung und Entwicklung der Villacher Freien Christengemeinde</h3>
                     <p>Alles begann 1947 als bei der Gründung der "Freien Christengemeinden Österreichs" in Sattledt, Kärnten als eigener Arbeitsbereich definiert wurde. Ab 1948 wurden dann in Villach jährliche Konferenzen veranstaltet, wo sich viele Pfingstgläubige aus Kärnten trafen. Ab 1952 wurden dann unter dem Evangelisten Jakob de Wilde regelmäßige Gottesdienste abgehalten und 1961, als Karl Wagner nach Villach übersiedelte, eine Gemeinde gegründet. Unter seiner Leitung wurde 1962/63 das noch heute benützte Gemeindehaus gebaut. 1968 übernahm dann Ype de Wilde die Leitung der Freien Christengemeinde in Villach und setzte die Arbeit von Karl Wagner fort. In den folgenden Jahren kamen und gingen mehrere Pastoren und erhielten die Freie Christengemeinde Villach bis heute.</p>
+                </div>
                 </div>
             </div>
         </div>
