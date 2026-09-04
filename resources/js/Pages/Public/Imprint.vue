@@ -88,7 +88,7 @@
 
                     <p>Bilder kommen von <a href="https://unsplash.com" target="_blank"
                             class="text-brand-primary hover:underline">Unsplash</a> oder <a href="https://pexels.com"
-                            target="_blank" class="text-brand-primary hover:underline">Pexels</a>.</p>
+                            target="_blank" class="text-brand-primary hover:underline">Pexels</a> oder sind ki generiert.</p>
                 </div>
 
                 <!-- Haftung -->
