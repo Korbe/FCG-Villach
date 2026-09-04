@@ -1,36 +1,27 @@
 <template>
     <public-layout title="Kontakt">
-        <div class="min-h-screen">
-            <header class="relative pb-32">
-                <div class="absolute inset-0">
-                    <img loading="lazy" alt="" class="w-full h-full object-cover" src="/images/contact.jpg" />
-                    <div aria-hidden="true" class="absolute inset-0 bg-brand-primary-1000 mix-blend-multiply" />
-                </div>
+        <Navbar />
 
-                <Navbar hasBackground />
+        <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
+            <div class="text-center mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 pb-16 px-5">
+                <span class="inline-flex items-center rounded-full bg-brand-primary-50 dark:bg-brand-primary-900 px-4 py-1.5 text-sm font-semibold text-brand-primary-700 dark:text-brand-primary-200">
+                    Wir sind für Sie da
+                </span>
+                <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+                    Wir freuen uns auf <span class="text-brand-primary">Sie</span>
+                </h1>
+                <p class="mt-3 text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto sm:text-lg md:mt-5 md:text-xl">
+                    Sie können mit uns über Telefon, E-Mail oder auch persönlich in Kontakt treten. Wir werden uns
+                    bemühen ihre Fragen, Anregungen oder auch Beschwerden so schnell wie möglich zu beantworten.
+                </p>
+            </div>
 
-                <div
-                    class="relative mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 max-w-md mx-auto px-4 pb-32 sm:max-w-3xl sm:px-6  lg:max-w-7xl lg:px-8">
-                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                        <span class="block xl:inline">Wir freuen uns auf</span>
-                        {{ ' ' }}
-                        <span class="block text-brand-primary xl:inline">Sie</span>
+            <!-- Cards -->
+            <section aria-labelledby="contact-heading"
+                class="pb-20 max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
 
-                    </h1>
-                    <p class="mt-3 md:mt-5 max-w-3xl text-xl text-gray-300">Sie können mit uns über Telefon, E-Mail oder
-                        auch persönlich in Kontakt treten. Wir werden uns bemühen ihre Fragen, Anregungen oder auch
-                        Beschwerden so schnell wie möglich zu beantwoten.</p>
-                </div>
-            </header>
-
-            <main class="h-full mx-2 bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
-                <div class="flex flex-grow ">
-                    <!-- Cards -->
-                    <section aria-labelledby="contact-heading"
-                        class="-mt-32 max-w-md mx-auto relative z-10 sm:max-w-3xl lg:max-w-7xl">
-
-                        <h2 class="sr-only">Kontaktieren Sie uns</h2>
-                        <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+                <h2 class="sr-only">Kontaktieren Sie uns</h2>
+                <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
                             <div v-for="contactDetail in contactDetails" :key="contactDetail.name"
                                 class="flex flex-col bg-white dark:bg-gray-700 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                                 <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
@@ -78,9 +69,6 @@
                         </div>
 
                     </section>
-
-                </div>
-            </main>
         </div>
 
     </public-layout>
