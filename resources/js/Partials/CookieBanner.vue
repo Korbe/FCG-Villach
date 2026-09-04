@@ -1,6 +1,6 @@
 <template>
     <Transition name="fade">
-        <div v-if="visible" class="fixed bottom-6 left-1/2 z-[9999] w-[95%] max-w-xl -translate-x-1/2">
+        <div v-if="consent === null" class="fixed bottom-6 left-1/2 z-[9999] w-[95%] max-w-xl -translate-x-1/2">
             <div
                 class="border border-neutral-800 bg-neutral-900/95 backdrop-blur rounded-2xl shadow-2xl overflow-hidden">
 
@@ -62,57 +62,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { useCookieConsent } from '@/Composables/useCookieConsent'
 
-const visible = ref(false)
-
-const GA_ID = 'G-PW8BBXXBKM'
-
-onMounted(() => {
-    const consent = localStorage.getItem('cookie-consent')
-
-    if (consent === 'accepted') {
-        initAnalytics()
-    } else if (!consent) {
-        visible.value = true
-    }
-})
-
-function accept() {
-    localStorage.setItem('cookie-consent', 'accepted')
-
-    initAnalytics()
-
-    visible.value = false
-}
-
-function reject() {
-    localStorage.setItem('cookie-consent', 'rejected')
-
-    visible.value = false
-}
-
-function initAnalytics() {
-    if (window.gtag) return
-
-    // Script laden
-    const script = document.createElement('script')
-    script.async = true
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-
-    document.head.appendChild(script)
-
-    // Google Analytics Setup
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-        window.dataLayer.push(arguments)
-    }
-    window.gtag = gtag
-
-    gtag('js', new Date())
-
-    gtag('config', GA_ID, {
-        anonymize_ip: true
-    })
-}
+const { consent, accept, reject } = useCookieConsent()
 </script>

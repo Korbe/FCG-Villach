@@ -44,6 +44,12 @@
                                     {{ item.name }}
                                     </Link>
                                 </li>
+                                <li>
+                                    <button type="button" @click="resetCookieConsent"
+                                        class="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                                        Cookie-Einstellungen
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -84,6 +90,10 @@
 import LogoText from "@/Partials/LogoText.vue";
 import { HeartIcon } from "@heroicons/vue/24/outline";
 import Credit from "./Credit.vue";
+import { useCookieConsent } from "@/Composables/useCookieConsent";
+
+const { reset: resetCookieConsent } = useCookieConsent();
+
 const navigation = {
     site: [
         { name: 'Über uns', href: route('public.about') },

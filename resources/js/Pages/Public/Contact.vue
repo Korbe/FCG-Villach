@@ -49,11 +49,24 @@
                             <div
                                 class="flex-1 w-full h-full relative map-responsive pb-[120%] sm:pb-[50%] md:pb-[50%] lg:pb-[30%] xl:pb-[30%] 2xl:pb-[30%]">
 
-
-                                <iframe allowfullscreen height="100%"
+                                <iframe v-if="consent === 'accepted'" allowfullscreen height="100%"
                                     loading="lazy"
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2740.0343905297646!2d13.8433933!3d46.6260827!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477081c082b8e4f7%3A0xce20ee88b28b7a1!2sFreie%20Christengemeinde%20%2F%20Pfingstgemeinde!5e0!3m2!1sde!2sat!4v1658674190571!5m2!1sde!2sat"
                                     style="border: 0" width="100%"></iframe>
+
+                                <div v-else
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center gap-4 bg-gray-100 dark:bg-gray-800 px-6">
+                                    <MapIcon class="h-10 w-10 text-brand-primary" aria-hidden="true" />
+                                    <p class="max-w-md text-sm text-gray-600 dark:text-gray-300">
+                                        Um die Karte anzuzeigen, muss eine Verbindung zu Google Maps hergestellt werden.
+                                        Dabei werden Daten an Google übertragen. Weitere Infos in unserer
+                                        <Link :href="route('public.privacy')" class="text-brand-primary hover:underline">Datenschutzerklärung</Link>.
+                                    </p>
+                                    <button @click="accept" type="button"
+                                        class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-brand-primary hover:bg-brand-primary-400">
+                                        Zustimmen &amp; Karte laden
+                                    </button>
+                                </div>
                             </div>
                             <div class="p-6 bg-gray-50 dark:bg-gray-800 md:px-8">
                                 <a class="inline-flex items-center text-base font-medium text-brand-primary-700 dark:text-brand-primary-300 hover:text-brand-primary-600 group"
@@ -75,9 +88,12 @@
 </template>
 
 <script setup>
-import { MapPinIcon, EnvelopeIcon, PhoneIcon, InformationCircleIcon } from "@heroicons/vue/24/outline";
+import { MapPinIcon, EnvelopeIcon, PhoneIcon, InformationCircleIcon, MapIcon } from "@heroicons/vue/24/outline";
 import Navbar from "@/Partials/Navbar.vue";
 import PublicLayout from "@/Layouts/PublicLayout.vue";
+import { useCookieConsent } from "@/Composables/useCookieConsent";
+
+const { consent, accept } = useCookieConsent();
 
 const contactDetails = [
     {
