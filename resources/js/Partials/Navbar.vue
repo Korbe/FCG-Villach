@@ -1,5 +1,15 @@
 <template>
-    <Popover as="div" class="w-full relative z-40 mx-auto">
+    <!-- Admin-only logout strip (desktop only, mobile keeps it in the hamburger menu), fixed above everything so it never squeezes the nav -->
+    <div v-if="$page.props.auth.user" class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-gray-900 dark:bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end">
+            <button @click="logout" type="button"
+                class="flex items-center gap-2 py-1.5 text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                <ArrowLeftStartOnRectangleIcon class="h-4 w-4" /> Abmelden
+            </button>
+        </div>
+    </div>
+
+    <Popover as="div" class="w-full relative z-40 mx-auto" :class="$page.props.auth.user ? 'lg:pt-8' : ''">
 
         <div class="flex justify-center">
 
@@ -38,11 +48,6 @@
                             class="flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-primary hover:bg-brand-primary-400">
                             <UserCircleIcon class="h-5 w-5 mr-2" /> Intern
                         </Link>
-
-                        <button v-if="$page.props.auth.user" @click="logout"
-                            class="flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-secondary hover:bg-brand-secondary-400">
-                            <ArrowLeftStartOnRectangleIcon class="h-7" /> Abmelden
-                        </button>
                     </div>
 
                 </div>
@@ -115,9 +120,15 @@
                                 </span>
                                 </Link>
 
-                                <button v-if="$page.props.auth.user" @click="logout"
-                                    class="flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-secondary hover:bg-brand-secondary-400">
-                                    <ArrowLeftStartOnRectangleIcon class="h-7" /> Abmelden
+                                <button v-if="$page.props.auth.user" @click="logout" type="button"
+                                    class="-m-1 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 w-full text-left">
+                                <div
+                                    class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-brand-secondary text-white sm:h-12 sm:w-12">
+                                    <ArrowLeftStartOnRectangleIcon class="h-6 w-6" aria-hidden="true" />
+                                </div>
+                                <span class="ml-3 text-base font-medium text-gray-500 dark:text-gray-300">
+                                    Abmelden
+                                </span>
                                 </button>
                             </nav>
                         </div>
@@ -132,7 +143,9 @@
     <transition enter-active-class="duration-150 ease-out" enter-from-class="opacity-0 scale-95"
         enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
         leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
-        <Disclosure v-if="!atTopOfPage" as="nav" class="fixed z-40 inset-x-0 top-0 bg-white dark:bg-gray-800 shadow-lg"
+        <Disclosure v-if="!atTopOfPage" as="nav"
+            class="fixed z-40 inset-x-0 top-0 bg-white dark:bg-gray-800 shadow-lg"
+            :class="$page.props.auth.user ? 'lg:mt-8' : ''"
             v-slot="{ open }">
             <div
                 class="relative max-w-7xl mx-auto text-center py-1 px-2 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -180,11 +193,6 @@
                             class="flex items-center justify-center px-4 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-primary hover:bg-brand-primary-400">
                         <UserCircleIcon class="h-5 w-5 mr-2" /> Intern
                         </Link>
-
-                        <button v-if="$page.props.auth.user" @click="logout"
-                            class="flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-brand-secondary hover:bg-brand-secondary-400">
-                            <ArrowLeftStartOnRectangleIcon class="h-5" /> Abmelden
-                        </button>
                     </div>
                 </div>
 
