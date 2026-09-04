@@ -239,7 +239,7 @@
 import { ref, computed, onBeforeMount, onBeforeUnmount } from 'vue';
 
 import { Disclosure, DisclosureButton, DisclosurePanel, Popover, PopoverButton, PopoverPanel } from '@headlessui/vue';
-import { ArrowLeftEndOnRectangleIcon, XMarkIcon, CalendarIcon, BanknotesIcon, ChatBubbleLeftRightIcon, Bars3Icon, NewspaperIcon, UserGroupIcon, HomeIcon, ArrowLeftStartOnRectangleIcon, UserCircleIcon } from '@heroicons/vue/24/outline';
+import { ArrowLeftEndOnRectangleIcon, XMarkIcon, CalendarIcon, BanknotesIcon, ChatBubbleLeftRightIcon, Bars3Icon, NewspaperIcon, UserGroupIcon, HomeIcon, ArrowLeftStartOnRectangleIcon, UserCircleIcon, CakeIcon } from '@heroicons/vue/24/outline';
 
 import Logo from "@/Partials/Logo.vue";
 import LogoText from "@/Partials/LogoText.vue";
@@ -258,6 +258,7 @@ const homeRoute = route('public.home') + '/';
 const navigation = [
     { name: 'Über uns', href: route('public.about'), icon: UserGroupIcon },
     { name: 'Events', href: route('public.events'), icon: CalendarIcon },
+    { name: 'Heferl Café', href: route('public.heferlCafe'), icon: CakeIcon },
     { name: 'Predigten', href: route('public.blog'), icon: NewspaperIcon },
     { name: 'Kontakt', href: route('public.contact'), icon: ChatBubbleLeftRightIcon },
     { name: 'Spenden', href: route('public.donate'), icon: BanknotesIcon },

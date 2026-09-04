@@ -15,6 +15,8 @@
 
         <team-preview />
 
+        <gallery />
+
         <testimonials />
 
         <faq />
@@ -36,6 +38,7 @@ import Welcome from "@/Partials/Home/Welcome.vue";
 import Events from "@/Partials/Home/Events.vue";
 import LatestSermon from "@/Partials/Home/LatestSermon.vue";
 import TeamPreview from "@/Partials/Home/TeamPreview.vue";
+import Gallery from "@/Partials/Home/Gallery.vue";
 
 defineProps({ news: Array, latestPost: Object })
 

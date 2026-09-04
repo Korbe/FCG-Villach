@@ -98,6 +98,7 @@ const navigation = {
     site: [
         { name: 'Über uns', href: route('public.about') },
         { name: 'Events', href: route('public.events') },
+        { name: 'Heferl Café', href: route('public.heferlCafe') },
         { name: 'Predigten', href: route('public.blog') },
         { name: 'Kontakt', href: route('public.contact') },
         { name: 'Spenden', href: route('public.donate') },

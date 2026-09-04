@@ -18,8 +18,9 @@
         <div class="container px-5 py-16 mx-auto">
             <div class="flex flex-wrap">
                 <div v-for="event in events" :key="event.name" class="w-full xl:w-1/3 md:w-1/2 p-3">
-                    <div
-                        class="border bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-lg flex flex-col items-center group shadow hover:shadow-lg">
+                    <component :is="event.link ? Link : 'div'" :href="event.link"
+                        class="border bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-lg flex flex-col items-center group shadow hover:shadow-lg transition-shadow"
+                        :class="event.link ? 'cursor-pointer' : ''">
                         <!-- Bildbereich (1/3 der Karte) -->
                         <div class="w-full h-56 overflow-hidden rounded-t-lg">
                             <img :src="event.image" alt="Event Image"
@@ -45,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </component>
 
                 </div>
 
@@ -63,6 +64,7 @@
 </template>
 
 <script setup>
+import { Link } from '@inertiajs/vue3';
 import { ArrowRightCircleIcon, CakeIcon, CalendarIcon, ClockIcon, NewspaperIcon, UserCircleIcon } from '@heroicons/vue/24/outline';
 
 const events = [
@@ -73,6 +75,7 @@ const events = [
         responsible: "Erika Korbitsch",
         icon: CakeIcon,
         image: "/images/events/cake.jpg",
+        link: route('public.heferlCafe'),
     },
     {
         name: "Gebet & Seelsorge",

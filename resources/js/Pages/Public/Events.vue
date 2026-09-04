@@ -26,7 +26,7 @@
                             <div class="flex justify-between">
                                 <h1 class="text-gray-900 dark:text-white text-xl font-semibold">{{ event.name }}</h1>
                             </div>
-                            <p v-if="event.description" class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ event.description }}</p>
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ event.description }}</p>
                             <div class="mt-5 space-y-3">
                                 <div class="flex items-center">
                                     <span class="inline-flex items-center justify-center h-9 w-9 rounded-lg bg-brand-primary-50 dark:bg-brand-primary-900">
@@ -52,7 +52,12 @@
                         <div>
                             <div class="-mt-px flex divide-x divide-gray-100 dark:divide-gray-600">
                                 <div class="w-0 flex-1 flex text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <a :href="`mailto:${event.mail}`"
+                                    <Link v-if="event.link" :href="event.link"
+                                        class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium border border-transparent rounded-bl-2xl transition-colors">
+                                        <ArrowRightIcon class="w-5 h-5 text-gray-400" aria-hidden="true" />
+                                        <span class="ml-3">Zur Seite</span>
+                                    </Link>
+                                    <a v-else :href="`mailto:${event.mail}`"
                                         class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm font-medium border border-transparent rounded-bl-2xl transition-colors">
                                         <EnvelopeIcon class="w-5 h-5 text-gray-400" aria-hidden="true" />
                                         <span class="ml-3">Schreiben</span>
@@ -76,7 +81,8 @@
 
 <script setup>
 import PublicLayout from "@/Layouts/PublicLayout.vue";
-import { CalendarIcon, ClockIcon, EnvelopeIcon, PhoneIcon, UserCircleIcon } from "@heroicons/vue/24/outline";
+import { Link } from "@inertiajs/vue3";
+import { CalendarIcon, ClockIcon, EnvelopeIcon, PhoneIcon, UserCircleIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
 import Navbar from "@/Partials/Navbar.vue";
 
 const events = [
@@ -84,7 +90,7 @@ const events = [
         name: "Gottesdienst",
         interval: "Sonntags",
         time: "10 Uhr",
-        description: "",
+        description: "Lobpreis, Predigt und Gemeinschaft – für die ganze Familie.",
         responsible: "Christian Korbitsch",
         phone: "+436505893093",
         mail: "chritian.korbitsch@fcg-villach.at"
@@ -93,7 +99,7 @@ const events = [
         name: "Gemeindegebet",
         interval: "Montags",
         time: '10 Uhr',
-        description: "",
+        description: "Gemeinsames Gebet für Anliegen aus Gemeinde und Gesellschaft.",
         responsible: "Erika Korbitsch",
         phone: "+4369911848920",
         mail: "erika.korbitsch@fcg-villach.at"
@@ -102,16 +108,17 @@ const events = [
         name: "Heferl Café",
         interval: "Jeden ersten Freitag im Monat",
         time: "14 - 18 Uhr",
-        description: "Unterhaltung, Austausch und Vernetzung bei Kuchen und Kaffee",
+        description: "Unterhaltung, Austausch und Vernetzung bei Kuchen und Kaffee.",
         responsible: "Erika Korbitsch",
         phone: "+4369911848920",
-        mail: "erika.korbitsch@fcg-villach.at"
+        mail: "erika.korbitsch@fcg-villach.at",
+        link: route('public.heferlCafe'),
     },
     {
         name: "Bibelstunde",
         interval: "14-tägig, Mittwochs",
         time: "16:30 Uhr",
-        description: "",
+        description: "Gemeinsames Studium der Bibel in entspannter Runde.",
         responsible: "Christian Korbitsch",
         phone: "+436505893093",
         mail: "chritian.korbitsch@fcg-villach.at"
@@ -120,7 +127,7 @@ const events = [
         name: "Gebet & Seelsorge",
         interval: "Auf Anfrage",
         time: "Jederzeit",
-        description: "",
+        description: "Persönliche Gespräche und Fürbitte, ganz nach Bedarf.",
         responsible: "Erika Korbitsch",
         phone: "+4369911848920",
         mail: "erika.korbitsch@fcg-villach.at"
@@ -129,7 +136,7 @@ const events = [
         name: "Hauskreis Erika",
         interval: "14-tägig, Mittwochs",
         time: "15 Uhr",
-        description: "",
+        description: "Kleiner Kreis zum Austausch über Glauben und Alltag.",
         responsible: "Erika Korbitsch",
         phone: "+4369911848920",
         mail: "erika.korbitsch@fcg-villach.at"

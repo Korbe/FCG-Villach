@@ -35,10 +35,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="hidden lg:flex justify-center items-center pt-32">
-                    <div class="mouse"></div>
-                </div>
             </header>
         </div>
     </div>
