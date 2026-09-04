@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-gradient-to-b from-white to-gray-100">
+    <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
         <div class="mx-auto py-12 px-10 max-w-lg sm:max-w-3xl lg:max-w-5xl lg:px-8 lg:py-24">
             <ul role="list"
                 class="space-y-12 sm:space-y-0 sm:space-x-0 sm:grid sm:grid-cols-2 sm:gap-6  lg:grid-cols-3 lg:gap-12">
                 <li v-for="person in team" :key="person.name"
-                    class="group rounded-2xl text-left bg-white shadow-sm ring-1 ring-gray-900/5 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    class="group rounded-2xl text-left bg-white dark:bg-gray-700 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <Link :href="route('public.about.team', slugify(person.name))">
                     <div>
                         <div class="aspect-w-1 aspect-h-1 overflow-hidden">
@@ -13,7 +13,7 @@
                         </div>
                         <div class="p-5 flex items-center justify-between">
                             <div class="font-medium text-lg leading-6 space-y-1">
-                                <h3 class="text-gray-900">{{ person.name }}</h3>
+                                <h3 class="text-gray-900 dark:text-white">{{ person.name }}</h3>
                                 <p class="text-brand-primary">{{ person.role }}</p>
                             </div>
                             <div>

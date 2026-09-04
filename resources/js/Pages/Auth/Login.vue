@@ -40,8 +40,8 @@ const submit = () => {
         </div>
 
         <!-- Right side: Form -->
-        <div class="w-full h-screen md:w-2/3 bg-white flex flex-col relative">
-            <Link :href="'/'" class="absolute top-4 left-4 flex items-center text-gray-900">
+        <div class="w-full h-screen md:w-2/3 bg-white dark:bg-gray-800 flex flex-col relative">
+            <Link :href="'/'" class="absolute top-4 left-4 flex items-center text-gray-900 dark:text-gray-100">
             <ArrowLeftIcon class="h-5 w-5 mr-2" /> Zurück
             </Link>
 
@@ -78,13 +78,13 @@ const submit = () => {
                         <div class="block mt-4">
                             <label class="flex items-center">
                                 <Checkbox v-model:checked="form.remember" name="remember" />
-                                <span class="ms-2 text-sm text-gray-600">Angemeldet bleiben</span>
+                                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">Angemeldet bleiben</span>
                             </label>
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
                             <Link v-if="canResetPassword" :href="route('password.request')"
-                                class="text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary-500">
+                                class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary-500">
                             Passwort vergessen?
                             </Link>
 

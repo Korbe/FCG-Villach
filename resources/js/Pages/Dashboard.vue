@@ -7,19 +7,19 @@ import {ArchiveBoxIcon, BookOpenIcon, ListBulletIcon, PlusIcon, ArrowUpOnSquareI
 <template>
     <AppLayout title="Dashboard">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-100 leading-tight">
                 Dashboard
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    
-                    
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+
+
                     <!-- Welcome -->
                     <div>
-                        <div class="p-6 sm:px-20 bg-white border-b border-gray-200 ">
+                        <div class="p-6 sm:px-20 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 dark:text-gray-100">
                             <div class="">
                                 <ApplicationLogo class="h-32 w-auto"/>
                             </div>
@@ -30,12 +30,12 @@ import {ArchiveBoxIcon, BookOpenIcon, ListBulletIcon, PlusIcon, ArrowUpOnSquareI
                         </div>
 
                         <!--Predigten-->
-                        <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+                        <div class="bg-gray-200 dark:bg-gray-700 bg-opacity-25 dark:bg-opacity-40 grid grid-cols-1 md:grid-cols-2">
                             <Link :href="route('dashboard.posts.create')">
                                 <div class="p-6">
                                     <div class="flex items-center">
                                         <BookOpenIcon class="w-8 h-8 text-gray-400"/>
-                                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Neue Predigt</div>
+                                        <div class="ml-4 text-lg text-gray-600 dark:text-gray-300 leading-7 font-semibold">Neue Predigt</div>
                                     </div>
 
                                     <div class="ml-12">
@@ -52,11 +52,11 @@ import {ArchiveBoxIcon, BookOpenIcon, ListBulletIcon, PlusIcon, ArrowUpOnSquareI
                             </Link>
 
                             <Link :href="route('dashboard.posts.index')">
-                                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                                <div class="p-6 border-t border-gray-200 dark:border-gray-600 md:border-t-0 md:border-l">
 
                                     <div class="flex items-center">
                                         <ListBulletIcon class="w-8 h-8 text-gray-400"/>
-                                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Alle Predigten</div>
+                                        <div class="ml-4 text-lg text-gray-600 dark:text-gray-300 leading-7 font-semibold">Alle Predigten</div>
                                     </div>
 
                                     <div class="ml-12">
@@ -85,7 +85,7 @@ import {ArchiveBoxIcon, BookOpenIcon, ListBulletIcon, PlusIcon, ArrowUpOnSquareI
                                 <div class="p-6">
                                     <div class="flex items-center">
                                         <ArrowUpOnSquareIcon class="w-8 h-8 text-gray-400"/>
-                                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Neuigkeiten hochladen</div>
+                                        <div class="ml-4 text-lg text-gray-600 dark:text-gray-300 leading-7 font-semibold">Neuigkeiten hochladen</div>
                                     </div>
 
                                     <div class="ml-12">
@@ -102,11 +102,11 @@ import {ArchiveBoxIcon, BookOpenIcon, ListBulletIcon, PlusIcon, ArrowUpOnSquareI
                             </Link>
 
                             <Link :href="route('dashboard.news.index')">
-                                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                                <div class="p-6 border-t border-gray-200 dark:border-gray-600 md:border-t-0 md:border-l">
 
                                     <div class="flex items-center">
                                         <ArchiveBoxIcon class="w-8 h-8 text-gray-400"/>
-                                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Alle Neuigkeiten</div>
+                                        <div class="ml-4 text-lg text-gray-600 dark:text-gray-300 leading-7 font-semibold">Alle Neuigkeiten</div>
                                     </div>
 
                                     <div class="ml-12">

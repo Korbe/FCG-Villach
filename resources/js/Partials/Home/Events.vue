@@ -1,14 +1,14 @@
 <template>
-    <section class="py-28 bg-gradient-to-b from-white to-gray-100 bg-white">
+    <section class="py-28 bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
         <div class="relative px-4 sm:px-6 lg:px-8">
             <div class="text-lg max-w-prose mx-auto">
                 <h1 id="freie-christengemeinde" style="scroll-margin: 7rem">
 
                     <span
-                        class="mt-2 block text-3xl md:text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Unsere
+                        class="mt-2 block text-3xl md:text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Unsere
                         <span class="text-brand-primary">Events</span></span>
                 </h1>
-                <p class="mt-8 md:text-center text-xl text-gray-500 leading-8">Bei uns wird
+                <p class="mt-8 md:text-center text-xl text-gray-500 dark:text-gray-400 leading-8">Bei uns wird
                     es nie langweilig. Es gibt allerhand zu tun und zu besuchen. Schauen Sie doch auch mal bei uns
                     vorbei.</p>
 
@@ -19,7 +19,7 @@
             <div class="flex flex-wrap">
                 <div v-for="event in events" :key="event.name" class="w-full xl:w-1/3 md:w-1/2 p-3">
                     <div
-                        class="border bg-white border-gray-200 rounded-lg flex flex-col items-center group shadow hover:shadow-lg">
+                        class="border bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-lg flex flex-col items-center group shadow hover:shadow-lg">
                         <!-- Bildbereich (1/3 der Karte) -->
                         <div class="w-full h-56 overflow-hidden rounded-t-lg">
                             <img :src="event.image" alt="Event Image"
@@ -28,9 +28,9 @@
 
                         <!-- Textbereich -->
                         <div class="w-full flex flex-col items-center my-4 p-6">
-                            <h2 class="text-xl text-gray-900 font-medium mb-2">{{ event.name }}</h2>
+                            <h2 class="text-xl text-gray-900 dark:text-white font-medium mb-2">{{ event.name }}</h2>
 
-                            <div class="mt-4 space-y-2 text-center">
+                            <div class="mt-4 space-y-2 text-center text-gray-700 dark:text-gray-300">
                                 <div class="flex items-center">
                                     <CalendarIcon class="h-6 w-6 text-brand-primary-500" />
                                     <p class="ml-2">{{ event.interval }}</p>
@@ -40,7 +40,7 @@
                                     <p class="ml-2">{{ event.time }}</p>
                                 </div>
                                 <div class="flex items-center">
-                                    <UserCircleIcon class="h-6 w-6 text-gray-500" />
+                                    <UserCircleIcon class="h-6 w-6 text-gray-500 dark:text-gray-400" />
                                     <p class="ml-2">{{ event.responsible }}</p>
                                 </div>
                             </div>

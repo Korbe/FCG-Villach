@@ -1,20 +1,20 @@
 <template>
-    <div class="border border-gray-300 rounded-md shadow-sm p-2">
+    <div class="border border-gray-300 dark:border-gray-600 dark:bg-gray-700 rounded-md shadow-sm p-2">
         <input ref="fileRef" :accept="accept" class="hidden" type="file" @change="change">
-        
+
         <div v-if="!modelValue">
-            <button class="flex px-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-md font-semibold text-xs text-white uppercase" type="button" @click="browse">
+            <button class="flex px-4 p-2 bg-gray-800 dark:bg-gray-600 hover:bg-gray-700 dark:hover:bg-gray-500 rounded-md font-semibold text-xs text-white uppercase" type="button" @click="browse">
                 <PaperClipIcon class="h-4 text-gray-400 mr-2" aria-hidden="true" />
                 <span>Durchsuchen</span>
             </button>
         </div>
 
-        <div v-else class="flex items-center justify-between">
+        <div v-else class="flex items-center justify-between dark:text-white">
             <PaperClipIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
             <div class="flex-1 ml-2 pr-1">{{ modelValue.name }}
-                <span class="text-gray-500 text-xs">({{ filesize(modelValue.size) }})</span>
+                <span class="text-gray-500 dark:text-gray-400 text-xs">({{ filesize(modelValue.size) }})</span>
             </div>
-            <button class="px-4 py-1 bg-gray-800 hover:bg-gray-700 rounded-md font-semibold text-xs text-white uppercase" type="button" @click="remove">
+            <button class="px-4 py-1 bg-gray-800 dark:bg-gray-600 hover:bg-gray-700 dark:hover:bg-gray-500 rounded-md font-semibold text-xs text-white uppercase" type="button" @click="remove">
                 Remove
             </button>
         </div>

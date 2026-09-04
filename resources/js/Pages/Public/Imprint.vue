@@ -3,21 +3,21 @@
 
         <Navbar />
 
-        <div>
+        <div class="bg-white dark:bg-gray-800">
             <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <span class="text-base font-semibold text-brand-primary-primary-500 tracking-wide uppercase">FCG
                         Villach</span>
-                    <h1 class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    <h1 class="mt-1 text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
                         Impressum</h1>
-                    <p class="text-lg">
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
                         Angaben gemäß § 5 ECG und Offenlegung nach § 25 Mediengesetz.
                     </p>
                 </div>
             </div>
         </div>
 
-        <section class="pb-24">
+        <section class="pb-24 bg-white dark:bg-gray-800">
             <div class="max-w-3xl mx-auto px-6 space-y-10">
 
                 <!-- Betreiber -->

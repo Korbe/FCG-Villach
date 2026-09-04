@@ -32,8 +32,8 @@ const submit = () => {
         </div>
 
         <!-- Right side: Form -->
-        <div class="w-full h-screen md:w-2/3 bg-white flex flex-col relative">
-            <Link :href="'/'" class="absolute top-4 left-4 flex items-center text-gray-900">
+        <div class="w-full h-screen md:w-2/3 bg-white dark:bg-gray-800 flex flex-col relative">
+            <Link :href="'/'" class="absolute top-4 left-4 flex items-center text-gray-900 dark:text-gray-100">
             <ArrowLeftIcon class="h-5 w-5 mr-2" /> Zurück
             </Link>
 

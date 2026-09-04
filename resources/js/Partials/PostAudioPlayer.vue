@@ -1,9 +1,9 @@
 <template>
-    <div ref="wrapper" class="relative flex flex-col sm:flex-row text-center rounded-lg border border-gray-300 bg-white px-2 md:px-6 py-5 items-center justify-center
+    <div ref="wrapper" class="relative flex flex-col sm:flex-row text-center rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-2 md:px-6 py-5 items-center justify-center
                md:text-left md:justify-between shadow-sm hover:border-brand-primary focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-brand-primary
                transform transition-transform duration-300 ease-in-out hover:scale-105 overflow-hidden group">
 
-        <div ref="progressBox" class="rounded-l-lg h-full absolute w-0 inset-0 bg-brand-primary-100"></div>
+        <div ref="progressBox" class="rounded-l-lg h-full absolute w-0 inset-0 bg-brand-primary-100 dark:bg-brand-primary-900/50"></div>
 
         <div class="z-10 pb-3 md:pb-0 flex-shrink-0">
             <img loading="lazy" :alt="post.author"
@@ -18,12 +18,12 @@
                 <span class="inline-block">{{ 'Angehört' }}</span>
             </p>
 
-            <p class="text-xl md:text-2xl font-medium text-gray-900">
+            <p class="text-xl md:text-2xl font-medium text-gray-900 dark:text-white">
                 {{ post.title }}
             </p>
-            <p class="py-3 text-base text-gray-500">
+            <p class="py-3 text-base text-gray-500 dark:text-gray-400">
                 <span class="font-medium hover:underline">{{ post.author }}</span>
-                <span class="text-gray-600"> · {{ post.published_at }}</span>
+                <span class="text-gray-600 dark:text-gray-400"> · {{ post.published_at }}</span>
             </p>
         </div>
 

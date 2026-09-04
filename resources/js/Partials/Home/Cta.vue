@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-b from-white to-gray-100 bg-white py-16 sm:pb-32">
+    <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800 py-16 sm:pb-32">
         <div class="relative">
             <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="relative rounded-2xl px-6 py-10 bg-brand-primary-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">

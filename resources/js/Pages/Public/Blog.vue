@@ -43,14 +43,14 @@
             </div>
         </div>
 
-        <div id="posts" class="bg-gradient-to-b from-white to-gray-100">
+        <div id="posts" class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
             <div class="max-w-4xl mx-auto py-24 sm:py-32 px-4">
 
                 <div class="text-center mb-12">
-                    <span class="inline-flex items-center rounded-full bg-brand-primary-50 px-4 py-1.5 text-sm font-semibold text-brand-primary-700">
+                    <span class="inline-flex items-center rounded-full bg-brand-primary-50 dark:bg-brand-primary-900 px-4 py-1.5 text-sm font-semibold text-brand-primary-700 dark:text-brand-primary-200">
                         Zuletzt gepredigt
                     </span>
-                    <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Neueste Predigten</h2>
+                    <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Neueste Predigten</h2>
                 </div>
 
                 <div class="grid grid-cols-1 gap-6">
@@ -58,9 +58,9 @@
 
                     <!--empty state-->
                     <div v-if="posts.length === 0"
-                        class="flex flex-col items-center text-center rounded-2xl border-2 border-dashed border-gray-300 bg-white px-6 py-16">
-                        <MicrophoneIcon class="h-10 w-10 text-gray-300" />
-                        <p class="mt-4 text-gray-500">Aktuell sind keine öffentlichen Predigten verfügbar.</p>
+                        class="flex flex-col items-center text-center rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-6 py-16">
+                        <MicrophoneIcon class="h-10 w-10 text-gray-300 dark:text-gray-500" />
+                        <p class="mt-4 text-gray-500 dark:text-gray-400">Aktuell sind keine öffentlichen Predigten verfügbar.</p>
                     </div>
 
                 </div>

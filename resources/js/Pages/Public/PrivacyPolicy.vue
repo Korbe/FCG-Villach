@@ -3,19 +3,19 @@
 
         <Navbar />
 
-        <div class="bg-white">
+        <div class="bg-white dark:bg-gray-800">
             <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <span class="text-base font-semibold text-brand-primary-500 tracking-wide uppercase">FCG
                         Villach</span>
-                    <h1 class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                    <h1 class="mt-1 text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
                         Datenschutz</h1>
                 </div>
             </div>
         </div>
 
 
-        <section class="pb-24">
+        <section class="pb-24 bg-white dark:bg-gray-800">
             <div class="max-w-3xl mx-auto px-6 space-y-10">
 
                 <!-- Betreiber -->

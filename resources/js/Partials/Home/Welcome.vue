@@ -1,5 +1,5 @@
 <template>
-    <section id="visitus" class="relative py-24 bg-gradient-to-b from-white to-gray-100">
+    <section id="visitus" class="relative py-24 bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
         <div class="relative px-4 sm:px-6 lg:px-8">
             <div class="text-lg max-w-prose mx-auto">
                 <h1 id="freie-christengemeinde" style="scroll-margin: 7rem">
@@ -7,10 +7,10 @@
                         class="block text-base md:text-center text-brand-primary font-semibold tracking-wide uppercase">FCG
                         Villach</span>
                     <span
-                        class="mt-2 block text-3xl md:text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Willkommen
+                        class="mt-2 block text-3xl md:text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Willkommen
                         auf unserer Homepage</span>
                 </h1>
-                <p class="mt-8 md:text-center text-xl text-gray-500 leading-8">Als Freie Christengemeinde –
+                <p class="mt-8 md:text-center text-xl text-gray-500 dark:text-gray-400 leading-8">Als Freie Christengemeinde –
                     Pfingstgemeinde ist es uns
                     ein
                     Anliegen, den Menschen in unserem Land zu dienen, indem wir die gute
@@ -25,7 +25,7 @@
                 <div v-for="(item, index) in welcomeItems" :key="index" class="xl:w-1/4 md:w-1/2 p-3">
 
                     <div
-                        class="border bg-white border-gray-200 rounded-lg flex items-center flex-col group shadow hover:shadow-lg">
+                        class="border bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-lg flex items-center flex-col group shadow hover:shadow-lg">
 
 
                         <div class="w-full h-56 overflow-hidden rounded-t-lg">
@@ -39,8 +39,8 @@
                                 class="h-14 mb-3 text-brand-primary-500 transition-transform duration-300 group-hover:-translate-y-2" />
 
                             <div class="p-6 text-left">
-                                <h2 class="text-xl text-gray-900 font-medium mb-2">{{ item.title }}</h2>
-                                <p class="leading-relaxed text-base">{{ item.description }}</p>
+                                <h2 class="text-xl text-gray-900 dark:text-white font-medium mb-2">{{ item.title }}</h2>
+                                <p class="leading-relaxed text-base text-gray-500 dark:text-gray-400">{{ item.description }}</p>
                             </div>
 
                         </div>

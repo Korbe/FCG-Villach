@@ -1,12 +1,12 @@
 <template>
-    <section v-if="post" class="py-24 sm:py-28 bg-gradient-to-b from-white to-gray-100 bg-white">
+    <section v-if="post" class="py-24 sm:py-28 bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
         <div class="relative px-4 sm:px-6 lg:px-8">
             <div class="text-lg max-w-prose mx-auto text-center">
-                <span class="inline-flex items-center rounded-full bg-brand-primary-50 px-4 py-1.5 text-sm font-semibold text-brand-primary-700">
+                <span class="inline-flex items-center rounded-full bg-brand-primary-50 dark:bg-brand-primary-900 px-4 py-1.5 text-sm font-semibold text-brand-primary-700 dark:text-brand-primary-200">
                     Zuletzt gepredigt
                 </span>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Neueste Predigt</h2>
-                <p class="mt-4 text-xl text-gray-500">Verpasst? Hier können Sie die letzte Predigt ganz bequem nachhören.</p>
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Neueste Predigt</h2>
+                <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">Verpasst? Hier können Sie die letzte Predigt ganz bequem nachhören.</p>
             </div>
         </div>
 

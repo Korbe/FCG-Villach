@@ -3,12 +3,12 @@
 
         <Navbar/>
 
-        <div class="relative py-16 lg:py-28 bg-white lg:bg-gradient-to-b lg:from-white lg:to-gray-100">
+        <div class="relative py-16 lg:py-28 bg-white dark:bg-gray-800 lg:bg-gradient-to-b lg:from-white lg:to-gray-100 dark:lg:from-gray-800 dark:lg:to-gray-800">
             <div class="hidden absolute top-0 inset-x-0 h-1/2 bg-transparent lg:block" aria-hidden="true"/>
             <div class="max-w-7xl mx-auto bg-brand-primary-600 lg:bg-transparent lg:px-8">
                 <div class="lg:grid lg:grid-cols-12">
                     <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
-                        <div class="absolute inset-x-0 h-1/2 bg-white lg:hidden" aria-hidden="true"/>
+                        <div class="absolute inset-x-0 h-1/2 bg-white dark:bg-gray-800 lg:hidden" aria-hidden="true"/>
                         <div class="max-w-md mx-auto px-4 sm:max-w-lg sm:px-6 lg:max-w-none lg:p-0">
                             <div class="aspect-w-1 aspect-h-1">
                                 <img loading="lazy" class="object-cover object-center rounded-3xl shadow-2xl" :src="person.imageUrl" :alt="person.name"/>

@@ -2,18 +2,18 @@
     <public-layout title="Events">
         <Navbar/>
 
-        <div class="bg-gradient-to-b from-white to-gray-100">
+        <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
             <div class="text-center mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 pb-6 px-5">
-                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
                     Heferl <span class="text-brand-primary">Café</span>
                 </h1>
-                <p class="mt-3 max-w-5xl lg:max-w-4xl text-gray-500 mx-auto text-xl sm:text-lg md:mt-5 lg:max-w-3xl md:text-xl">
+                <p class="mt-3 max-w-5xl lg:max-w-4xl text-gray-500 dark:text-gray-400 mx-auto text-xl sm:text-lg md:mt-5 lg:max-w-3xl md:text-xl">
                     Kommt, seht und schmeckt wie herrlich der Herr ist. Jeden ersten Freitag im Monat.
                 </p>
             </div>
-        
+
             <!-- First Section -->
-            <div class="overflow-hidden bg-white py-12 sm:py-12">
+            <div class="overflow-hidden bg-white dark:bg-gray-800 py-12 sm:py-12">
                 <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                     <!-- <div class="max-w-4xl">
                         <p class="text-base/7 font-semibold text-brand-primary-600">Über uns</p>
@@ -22,9 +22,9 @@
                     </div> -->
                     <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
                             <div class="lg:pr-8">
-                            <h2 class="text-pretty text-2xl font-semibold tracking-tight text-gray-900">Unsere Mission</h2>
-                            <p class="mt-6 text-base/7 text-gray-600">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                            <p class="mt-8 text-base/7 text-gray-600">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
+                            <h2 class="text-pretty text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Unsere Mission</h2>
+                            <p class="mt-6 text-base/7 text-gray-600 dark:text-gray-400">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+                            <p class="mt-8 text-base/7 text-gray-600 dark:text-gray-400">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
                             </div>
                             <div class="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
                             <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
@@ -43,24 +43,24 @@
                             </div>
                             </div>
                             <div class="max-lg:mt-16 lg:col-span-1">
-                            <p class="text-base/7 font-semibold text-gray-500">Die Zahlen</p>
-                            <hr class="mt-6 border-t border-gray-200" />
+                            <p class="text-base/7 font-semibold text-gray-500 dark:text-gray-400">Die Zahlen</p>
+                            <hr class="mt-6 border-t border-gray-200 dark:border-gray-700" />
                             <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-                                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                                <dt class="text-sm/6 text-gray-600">Kuchen gebacken</dt>
-                                <dd class="order-first text-6xl font-semibold tracking-tight"><span>>150</span></dd>
+                                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 dark:border-gray-700 pb-4">
+                                <dt class="text-sm/6 text-gray-600 dark:text-gray-400">Kuchen gebacken</dt>
+                                <dd class="order-first text-6xl font-semibold tracking-tight dark:text-white"><span>>150</span></dd>
                                 </div>
-                                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                                <dt class="text-sm/6 text-gray-600">Gegündet</dt>
-                                <dd class="order-first text-6xl font-semibold tracking-tight"><span>2015</span></dd>
+                                <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 dark:border-gray-700 pb-4">
+                                <dt class="text-sm/6 text-gray-600 dark:text-gray-400">Gegündet</dt>
+                                <dd class="order-first text-6xl font-semibold tracking-tight dark:text-white"><span>2015</span></dd>
                                 </div>
-                                <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-                                <dt class="text-sm/6 text-gray-600">Keine Kosten</dt>
-                                <dd class="order-first text-6xl font-semibold tracking-tight"><span>0€</span></dd>
+                                <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 dark:max-sm:border-gray-700 max-sm:pb-4">
+                                <dt class="text-sm/6 text-gray-600 dark:text-gray-400">Keine Kosten</dt>
+                                <dd class="order-first text-6xl font-semibold tracking-tight dark:text-white"><span>0€</span></dd>
                                 </div>
                                 <div class="flex flex-col gap-y-2">
-                                <dt class="text-sm/6 text-gray-600">Kuchen zur Auswahl</dt>
-                                <dd class="order-first text-6xl font-semibold tracking-tight"><span>8</span></dd>
+                                <dt class="text-sm/6 text-gray-600 dark:text-gray-400">Kuchen zur Auswahl</dt>
+                                <dd class="order-first text-6xl font-semibold tracking-tight dark:text-white"><span>8</span></dd>
                                 </div>
                             </dl>
                         </div>
@@ -139,17 +139,17 @@
             </div> -->
 
             <!-- Team Section -->
-            <div class="bg-gray-50 py-24 sm:py-32">
+            <div class="bg-gray-50 dark:bg-gray-900 py-24 sm:py-32">
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:mx-0">
-                    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our team</h2>
-                    <p class="mt-6 text-lg/8 text-gray-600">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+                    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">Our team</h2>
+                    <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
                 </div>
                 <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                     <li v-for="person in people" :key="person.name">
                     <img class="aspect-[3/2] w-full rounded-2xl object-cover" :src="person.imageUrl" alt="" />
-                    <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">{{ person.name }}</h3>
-                    <p class="text-base/7 text-gray-600">{{ person.role }}</p>
+                    <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900 dark:text-white">{{ person.name }}</h3>
+                    <p class="text-base/7 text-gray-600 dark:text-gray-400">{{ person.role }}</p>
                     </li>
                 </ul>
                 </div>

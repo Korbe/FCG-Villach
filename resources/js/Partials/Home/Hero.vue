@@ -2,8 +2,8 @@
     <div class="flex flex-col h-screen relative">
 
         <div class="absolute inset-0 ">
-            <img loading="lazy" alt="" class="w-full lg:hidden h-full object-cover" src="/images/hero.jpg"/>
-            <img loading="lazy" alt="" class="hidden lg:block w-full h-full object-cover" src="/images/hero-lg.jpg"/>
+            <img alt="" class="w-full h-full object-cover" :src="theme === 'dark' ? '/images/hero-dark.png' : '/images/hero-light.jpg'"/>
+            <div class="absolute inset-0 bg-black/0 dark:bg-black/20"></div>
         </div>
 
         <Navbar blueMobileButton hasBackground/>
@@ -48,4 +48,7 @@
 <script setup>
 import {PlayIcon, UserGroupIcon} from "@heroicons/vue/24/outline";
 import Navbar from "@/Partials/Navbar.vue";
+import { useDarkMode } from "@/Composables/useDarkMode";
+
+const { theme } = useDarkMode();
 </script>
