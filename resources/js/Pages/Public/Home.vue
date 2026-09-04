@@ -5,11 +5,15 @@
 
         <welcome />
 
+        <latest-sermon :post="latestPost" />
+
         <news :items="news" />
 
         <visit-us />
 
         <Events />
+
+        <team-preview />
 
         <testimonials />
 
@@ -30,7 +34,9 @@ import News from "@/Partials/Home/News.vue";
 import VisitUs from "@/Partials/Home/VisitUs.vue";
 import Welcome from "@/Partials/Home/Welcome.vue";
 import Events from "@/Partials/Home/Events.vue";
+import LatestSermon from "@/Partials/Home/LatestSermon.vue";
+import TeamPreview from "@/Partials/Home/TeamPreview.vue";
 
-defineProps({ news: Array })
+defineProps({ news: Array, latestPost: Object })
 
 </script>

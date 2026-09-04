@@ -13,8 +13,21 @@ class HomeController extends Controller
 {
     public function home(Request $request)
     {
+        $latestPost = Post::where('published_at', '<=', Carbon::now())
+            ->orderBy('published_at', 'DESC')
+            ->first();
+
         return Inertia::render('Public/Home', [
             'news' => News::with(['media'])->latest()->take(10)->get(),
+            'latestPost' => $latestPost ? [
+                'id' => $latestPost->id,
+                'title' => $latestPost->title,
+                'audio' => $latestPost->getFirstMediaUrl('audio'),
+                'published_at' => $latestPost->published_at->format('d.m.Y'),
+                'author' => $latestPost->author,
+                'photo' => $latestPost->getFirstMediaUrl('photo')
+                    ?: 'https://ui-avatars.com/api/?name=' . urlencode($latestPost->author) . '&color=0DB3E9&background=edfbff',
+            ] : null,
         ]);
     }
 
