@@ -112,8 +112,17 @@
                     </p>
                 </div>
 
+                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div v-for="(photo, index) in teamPhotos" :key="photo.caption"
+                        class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 cursor-pointer group"
+                        @click="openLightbox(teamPhotos, index)">
+                        <img loading="lazy" :src="photo.image" :alt="photo.caption"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    </div>
+                </div>
+
                 <ul role="list"
-                    class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-4xl mx-auto lg:max-w-none">
+                    class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-4xl mx-auto lg:max-w-none">
                     <li v-for="person in team" :key="person.name"
                         class="rounded-2xl text-center bg-white dark:bg-gray-700 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <div class="aspect-w-1 aspect-h-1">
@@ -146,7 +155,7 @@
                     <Slide v-for="(slide, index) in gallery" :key="slide.caption">
                         <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden"
                             :class="slide.image ? 'cursor-pointer group' : ''"
-                            @click="slide.image && openLightbox(index)">
+                            @click="slide.image && openLightbox(gallery, index)">
                             <img v-if="slide.image" loading="lazy" :src="slide.image" :alt="slide.caption"
                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div v-else
@@ -177,18 +186,18 @@
                     <XMarkIcon class="h-8 w-8" />
                 </button>
 
-                <button v-if="gallery.length > 1" @click.stop="prevImage" type="button"
+                <button v-if="activeGallery.length > 1" @click.stop="prevImage" type="button"
                     class="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10">
                     <span class="sr-only">Vorheriges Bild</span>
                     <ChevronLeftIcon class="h-8 w-8" />
                 </button>
-                <button v-if="gallery.length > 1" @click.stop="nextImage" type="button"
+                <button v-if="activeGallery.length > 1" @click.stop="nextImage" type="button"
                     class="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10">
                     <span class="sr-only">Nächstes Bild</span>
                     <ChevronRightIcon class="h-8 w-8" />
                 </button>
 
-                <img @click.stop :src="gallery[lightboxIndex].image" :alt="gallery[lightboxIndex].caption"
+                <img @click.stop :src="activeGallery[lightboxIndex].image" :alt="activeGallery[lightboxIndex].caption"
                     class="max-w-full max-h-full object-contain rounded-lg select-none" />
             </div>
         </Teleport>
@@ -306,17 +315,33 @@ const team = [
     },
 ];
 
+const teamPhotos = [
+    { caption: "Das Heferl Café Team", image: "/images/heferl/team.jpg" },
+    { caption: "Das Team am Buffet", image: "/images/heferl/team-buffet.jpg" },
+];
+
 const gallery = [
-    { caption: "Süßes Buffet", image: "/images/heferl/cake.jpg" },
-    { caption: "Gemütliches Beisammensein", image: "/images/heferl/sittingdrinking.jpg" },
-    { caption: "Frisch aufgebrühter Kaffee", image: "/images/heferl/cofee.jpg" },
-    { caption: "Gäste willkommen", image: "/images/heferl/welcome.jpg" },
+    { caption: "Buffet-Impression 1", image: "/images/heferl/buffet/bufffet%20(1).jpg" },
+    { caption: "Buffet-Impression 2", image: "/images/heferl/buffet/bufffet%20(2).jpg" },
+    { caption: "Buffet-Impression 3", image: "/images/heferl/buffet/bufffet%20(3).jpg" },
+    { caption: "Buffet-Impression 4", image: "/images/heferl/buffet/bufffet%20(4).jpg" },
+    { caption: "Buffet-Impression 5", image: "/images/heferl/buffet/bufffet%20(5).jpg" },
+    { caption: "Buffet-Impression 6", image: "/images/heferl/buffet/bufffet%20(6).jpg" },
+    { caption: "Buffet-Impression 7", image: "/images/heferl/buffet/bufffet%20(7).jpg" },
+    { caption: "Buffet-Impression 8", image: "/images/heferl/buffet/bufffet%20(8).jpg" },
+    { caption: "Buffet-Impression 9", image: "/images/heferl/buffet/bufffet%20(9).jpg" },
+    { caption: "Buffet-Impression 10", image: "/images/heferl/buffet/bufffet%20(10).jpg" },
+    { caption: "Buffet-Impression 11", image: "/images/heferl/buffet/bufffet%20(11).jpg" },
+    { caption: "Buffet-Impression 12", image: "/images/heferl/buffet/bufffet%20(12).jpg" },
+    { caption: "Buffet-Impression 13", image: "/images/heferl/buffet/bufffet%20(13).jpg" },
 ];
 
 // Lightbox
+const activeGallery = ref(gallery);
 const lightboxIndex = ref(null);
 
-const openLightbox = (index) => {
+const openLightbox = (images, index) => {
+    activeGallery.value = images;
     lightboxIndex.value = index;
 };
 
@@ -326,12 +351,12 @@ const closeLightbox = () => {
 
 const prevImage = () => {
     if (lightboxIndex.value === null) return;
-    lightboxIndex.value = (lightboxIndex.value - 1 + gallery.length) % gallery.length;
+    lightboxIndex.value = (lightboxIndex.value - 1 + activeGallery.value.length) % activeGallery.value.length;
 };
 
 const nextImage = () => {
     if (lightboxIndex.value === null) return;
-    lightboxIndex.value = (lightboxIndex.value + 1) % gallery.length;
+    lightboxIndex.value = (lightboxIndex.value + 1) % activeGallery.value.length;
 };
 
 const handleKeydown = (event) => {
