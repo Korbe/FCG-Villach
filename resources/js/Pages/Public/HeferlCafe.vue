@@ -24,8 +24,8 @@
                         „Kommt, seht und schmeckt, wie freundlich der Herr ist."
                     </p>
                     <p class="mt-6 max-w-xl mx-auto text-lg text-white/80">
-                        Ein gemütliches Zusammenkommen bei Torte, Kaffee und guter Gesellschaft – frei zugänglich für
-                        jeden, alles auf freiwillige Spende.
+                        Ein gemütliches Zusammenkommen bei Torte, Kaffee und Pikantes bei guter Gesellschaft - jeder ist
+                        herzlich willkommen.<br>Wir bitte um einen Unkostenbeitrag.
                     </p>
 
                     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,6 +67,15 @@
         <!-- Buffet -->
         <div id="buffet" class="bg-gray-50 dark:bg-gray-900 py-20 scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="my-10 gap-6 max-w-xl mx-auto">
+                    <div 
+                        class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 cursor-pointer group">
+                        <img loading="lazy" src="/images/heferl/leitung.jpeg" alt="Heferl Leitung Korbitsch Erika und Andrea Kirisits"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    </div>
+                </div>
+
                 <div class="text-center max-w-2xl mx-auto">
                     <span
                         class="inline-flex items-center rounded-full bg-brand-secondary-50 dark:bg-brand-secondary-900 px-4 py-1.5 text-sm font-semibold text-brand-secondary-800 dark:text-brand-secondary-200">
@@ -161,7 +170,8 @@
                             <div v-else
                                 class="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-brand-secondary-100 to-brand-primary-100 dark:from-gray-800 dark:to-gray-700">
                                 <PhotoIcon class="h-10 w-10 text-brand-secondary-600 dark:text-gray-500 px-5" />
-                                <p class="text-sm font-medium text-brand-secondary-800 dark:text-gray-400">{{ slide.caption }}</p>
+                                <p class="text-sm font-medium text-brand-secondary-800 dark:text-gray-400">{{
+                                    slide.caption }}</p>
                             </div>
                         </div>
                     </Slide>
@@ -229,7 +239,8 @@
                             <p class="max-w-md text-sm text-gray-600 dark:text-gray-300">
                                 Um die Karte anzuzeigen, muss eine Verbindung zu Google Maps hergestellt werden.
                                 Dabei werden Daten an Google übertragen. Weitere Infos in unserer
-                                <Link :href="route('public.privacy')" class="text-brand-primary hover:underline">Datenschutzerklärung</Link>.
+                                <Link :href="route('public.privacy')" class="text-brand-primary hover:underline">
+                                Datenschutzerklärung</Link>.
                             </p>
                             <button @click="accept" type="button"
                                 class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-brand-primary hover:bg-brand-primary-400">
@@ -295,18 +306,18 @@ const team = [
     },
     {
         name: "Andrea Kirisits",
-        role: "Tochter & Mitorganisation",
+        role: "Leitung",
         imageUrl: "/images/portraits/Andrea-Kirisits.jpg",
     },
     {
         name: "Maria Stöhr",
         role: "Team",
-        imageUrl: "https://ui-avatars.com/api/?name=Maria+Stöhr&color=0DB3E9&background=edfbff",
+        imageUrl: "/images/heferl/maria.jpg",
     },
     {
         name: "Melanie Schmölzer",
         role: "Team",
-        imageUrl: "https://ui-avatars.com/api/?name=Melanie+Schmölzer&color=E49001&background=fff3d9",
+        imageUrl: "/images/heferl/melanie.jpg",
     },
     {
         name: "Maedeh Danialfar",
@@ -321,8 +332,8 @@ const teamPhotos = [
 ];
 
 const gallery = [
-    { caption: "Buffet-Impression 1", image: "/images/heferl/buffet/bufffet%20(1).jpg" },
-    { caption: "Buffet-Impression 2", image: "/images/heferl/buffet/bufffet%20(2).jpg" },
+    { caption: "Kekse", image: "/images/heferl/cookies.jpg" },
+    { caption: "Interior", image: "/images/heferl/interior.jpeg" },
     { caption: "Buffet-Impression 3", image: "/images/heferl/buffet/bufffet%20(3).jpg" },
     { caption: "Buffet-Impression 4", image: "/images/heferl/buffet/bufffet%20(4).jpg" },
     { caption: "Buffet-Impression 5", image: "/images/heferl/buffet/bufffet%20(5).jpg" },
