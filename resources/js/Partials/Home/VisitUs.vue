@@ -23,7 +23,7 @@
 
         <div class="mt-3 flex text-lg text-white">
           <MapPinIcon class="text-brand-secondary-700 h-6 w-6 mr-2" />
-          <p class="ml-2">Vassacherstraße 28, 9500 Villach</p>
+          <p class="ml-2">Vassacher Straße 28, 9500 Villach</p>
         </div>
 
         <div class="mt-8">

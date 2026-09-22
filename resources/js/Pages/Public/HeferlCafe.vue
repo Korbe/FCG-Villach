@@ -223,7 +223,7 @@
                     Wo wir sind
                 </h2>
                 <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-                    Im Erdgeschoss der FCG Villach, Vassacherstraße 28, 9500 Villach. Frei zugänglich für jeden – ihr
+                    Im Erdgeschoss der FCG Villach, Vassacher Straße 28, 9500 Villach. Frei zugänglich für jeden – ihr
                     müsst euch nicht anmelden, kommt einfach vorbei.
                 </p>
 
