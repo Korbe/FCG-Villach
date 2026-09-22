@@ -114,7 +114,7 @@ const contactDetails = [
     },
     {
         name: 'Besuchen Sie uns',
-        detail: 'Vassacherstraße 28, 9500 Villach',
+        detail: 'Vassacher Straße 28, 9500 Villach',
         href: 'https://goo.gl/maps/fDxswRLhh9dfKHUZ8',
         description: 'Wir freuen uns Sie kennenzulernen. Es entsteht keinerlei Verpflichtung. Sie können kommen, schauen, bleiben oder wieder gehen.',
         icon: MapPinIcon,
