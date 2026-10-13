@@ -17,8 +17,14 @@ class TeamController extends Controller
         if(!Arr::exists($team, $name))
             abort(404);
 
+        $person = $team[$name];
+        $imagePath = public_path(ltrim($person['imageUrl'], '/'));
+        if (is_file($imagePath)) {
+            $person['imageUrl'] .= '?v=' . substr(md5_file($imagePath), 0, 8);
+        }
+
         return Inertia::render('Public/TeamSingle', [
-            "person" => $team[$name]
+            "person" => $person
         ]);
     }
 }
