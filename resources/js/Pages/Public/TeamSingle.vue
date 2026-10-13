@@ -31,19 +31,19 @@
                         <div class="relative max-w-md mx-auto py-12 px-4 sm:max-w-3xl sm:py-16 lg:my-10 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
 
 
-                            <p class="text-xl text-white font-medium">{{ person.role }}</p>
+                            <p v-if="person.role" class="text-xl text-white font-medium">{{ person.role }}</p>
                             <h1 class="my-2 text-3xl font-extrabold text-white">{{ person.name }}</h1>
 
-                            <p class="text-white text text-xl sm:text-lg md:text-xl">{{ person.lead }}</p>
-                            <p class="mt-5 text-lg text-white">{{ person.bio }}</p>
+                            <p v-if="person.lead" class="text-white text text-xl sm:text-lg md:text-xl">{{ person.lead }}</p>
+                            <p v-if="person.bio" class="mt-5 text-lg text-white">{{ person.bio }}</p>
 
-                            <div class="sm:space-x-4 mt-5 sm:flex justify-center sm:justify-start">
-                                <a :href="`tel:${person.phone}`"
+                            <div v-if="person.phone || person.mail" class="sm:space-x-4 mt-5 sm:flex justify-center sm:justify-start">
+                                <a v-if="person.phone" :href="`tel:${person.phone}`"
                                    class="border border-transparent bg-white text-gray-500 flex items-center justify-center px-5 py-3 text-base shadow-md font-medium rounded-md white hover:bg-gray-50 md:px-10">
                                     <PhoneIcon class="w-5 h-5" aria-hidden="true"/>
                                     <span class="ml-3">Anrufen</span>
                                 </a>
-                                <a :href="`mailto:${person.mail}`"
+                                <a v-if="person.mail" :href="`mailto:${person.mail}`"
                                    class="mt-3 sm:mt-0 border border-transparent bg-white text-gray-500 flex items-center justify-center px-5 py-3 text-base shadow-md font-medium rounded-md white hover:bg-gray-50 md:px-10">
                                     <EnvelopeIcon class="w-5 h-5" aria-hidden="true"/>
                                     <span class="ml-3">Schreiben</span>

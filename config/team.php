@@ -64,4 +64,13 @@ return [
         'phone' => '+4366565103133',
         'mail' => 'udehtochukwu66@gmail.com',
     ],
+    'natania-tochi' => [
+        'name' => 'Natania Tochi',
+        'role' => '',
+        'imageUrl' => '/images/portraits/Natania-Tochi.jpg',
+        'lead' => '',
+        'bio' => '',
+        'phone' => '',
+        'mail' => '',
+    ],
 ];
