@@ -78,7 +78,10 @@
                         dadurch erzeugten Informationen werden in der Regel an einen Server von Google übertragen und
                         dort gespeichert.<br>
                         Wir nutzen Google Analytics ausschließlich zur Verbesserung meiner Website und zur Analyse der
-                        Nutzung. Die IP-Adresse wird anonymisiert verarbeitet.
+                        Nutzung. Die IP-Adresse wird anonymisiert verarbeitet.<br><br>
+                        Informationen zum Umgang mit Nutzerdaten durch Google finden Sie in der
+                        <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer"
+                            class="text-brand-primary hover:underline">Datenschutzerklärung von Google</a>.
                     </p>
                 </div>
 
@@ -88,7 +91,7 @@
                     </h2>
 
                     <p class="leading-relaxed">
-                        Wenn Sie mit uns per Telefon, E-Mail oder SMS Kontakt aufnehmen, werden
+                        Wenn Sie mit uns per Telefon, E-Mail, SMS oder WhatsApp Kontakt aufnehmen, werden
                         die von Ihnen übermittelten personenbezogenen Daten (z. B. Name, Telefonnummer, E-Mail-Adresse
                         sowie der Inhalt Ihrer Nachricht) zum Zweck der Bearbeitung Ihrer Anfrage und für den Fall von
                         Anschlussfragen verarbeitet.<br><br>
@@ -101,7 +104,14 @@
                         sofern keine gesetzliche Verpflichtung hierzu besteht.<br><br>
 
                         Die Daten werden nur so lange gespeichert, wie dies für die Bearbeitung Ihrer Anfrage oder
-                        aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist.
+                        aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist.<br><br>
+
+                        Bei einer Kontaktaufnahme über WhatsApp werden Ihre Nachricht und Ihre Telefonnummer zusätzlich
+                        von WhatsApp (WhatsApp Ireland Limited) verarbeitet. Es gelten die Datenschutzbestimmungen von
+                        WhatsApp, die Sie in der
+                        <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank"
+                            rel="noopener noreferrer" class="text-brand-primary hover:underline">Datenschutzrichtlinie
+                            von WhatsApp</a> nachlesen können.
                     </p>
                 </div>
 
