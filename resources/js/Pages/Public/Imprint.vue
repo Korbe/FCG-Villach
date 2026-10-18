@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Impressum">
+    <public-layout title="Impressum"
+        description="Impressum und Anbieterkennzeichnung der Freien Christengemeinde Villach.">
 
         <Navbar />
 

@@ -1,4 +1,15 @@
 User-agent: *
-Disallow:
+Disallow: /dashboard
+Disallow: /posts
+Disallow: /news
+Disallow: /user/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /two-factor-challenge
+Disallow: /email/
+Disallow: /confirm-password
+Disallow: /predigten/stats/
 
 Sitemap: https://fcg-villach.at/sitemap.xml

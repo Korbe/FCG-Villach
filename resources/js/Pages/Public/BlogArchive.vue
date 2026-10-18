@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Predigten">
+    <public-layout title="Predigten-Archiv"
+        description="Das Predigten-Archiv der FCG Villach: Alle Predigten zum Nachhören im Überblick.">
 
         <Navbar />
 

@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Spenden">
+    <public-layout title="Spenden & Unterstützen"
+        description="Die FCG Villach finanziert sich ausschließlich aus Spenden. Hier finden Sie die Kontodaten, um unsere Arbeit in Villach zu unterstützen.">
 
 
 

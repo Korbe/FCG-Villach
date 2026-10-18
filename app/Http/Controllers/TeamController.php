@@ -18,6 +18,7 @@ class TeamController extends Controller
             abort(404);
 
         $person = $team[$name];
+        $person['slug'] = $name;
         $imagePath = public_path(ltrim($person['imageUrl'], '/'));
         if (is_file($imagePath)) {
             $person['imageUrl'] .= '?v=' . substr(md5_file($imagePath), 0, 8);

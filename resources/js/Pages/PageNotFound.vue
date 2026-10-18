@@ -1,5 +1,5 @@
 <template>
-    <public-layout title="404 - Seite konnte nicht gefunden werden">
+    <public-layout title="404 - Seite nicht gefunden" noindex>
         <Navbar />
 
         <div class="min-h-full py-36 lg:py-48 flex flex-col bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">

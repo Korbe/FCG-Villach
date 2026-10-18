@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Home">
+    <public-layout title="Freie Christengemeinde in Villach"
+        description="Freie Christengemeinde Villach: Gottesdienst jeden Sonntag um 10 Uhr, Predigten zum Anhören, Heferl Café und lebendige Gemeinschaft in der Vassacher Straße 28.">
 
         <hero />
 

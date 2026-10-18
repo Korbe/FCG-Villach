@@ -1,5 +1,5 @@
 <template>
-    <public-layout :title="person.name">
+    <public-layout :title="person.name" :description="description" :url="url" :image="image" og-type="profile">
 
         <Navbar/>
 
@@ -62,8 +62,9 @@ import PublicLayout from "@/Layouts/PublicLayout.vue";
 import Footer from "@/Partials/Footer.vue";
 import Navbar from "@/Partials/Navbar.vue";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
+import { computed } from "vue";
 
-defineProps({
+const props = defineProps({
     person: {
         type: Object,
         required: true,
@@ -78,5 +79,20 @@ defineProps({
         })
     }
 });
+
+const siteUrl = "https://fcg-villach.at";
+
+const description = computed(() => {
+    const intro = props.person.role
+        ? `${props.person.name}, ${props.person.role} der FCG Villach.`
+        : `${props.person.name} aus dem Team der FCG Villach.`;
+    const text = [intro, props.person.lead].filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
+    if (text.length <= 160) return text;
+    return text.slice(0, 157).replace(/\s+\S*$/, "") + "…";
+});
+
+const url = computed(() => `${siteUrl}/about/${props.person.slug}`);
+
+const image = computed(() => `${siteUrl}${props.person.imageUrl}`);
 </script>
 

@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Über uns">
+    <public-layout title="Über uns: Leiterteam & Glaube"
+        description="Lerne das Leiterteam der Freien Christengemeinde Villach kennen und erfahre, woran wir glauben – als staatlich anerkannte Freikirche in Kärnten.">
         <Navbar/>
 
         <div class="bg-white dark:bg-gray-800 text-center mt-16 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 px-5">
@@ -10,18 +11,18 @@
                 Das sind <span class="text-brand-primary">wir</span>
             </h1>
             <p class="mt-3 text-xl text-gray-500 dark:text-gray-400 max-w-5xl lg:max-w-4xl mx-auto sm:text-lg md:mt-5 md:text-xl">
-                Wir sind das Leiterteam der Freien Christengmeinde Villach. Wir freuen uns auf Sie.
+                Wir sind das Leiterteam der Freien Christengemeinde Villach. Wir freuen uns auf Sie.
             </p>
 
             <div class="flex justify-center mt-10">
-                <img src="/images/team.jpg" class="ring-1 ring-gray-900/10 dark:ring-white/10 shadow-2xl rounded-2xl object-cover h-60 sm:h-96 md:h-[36rem]" />
+                <img src="/images/team.jpg" alt="Das Leiterteam der Freien Christengemeinde Villach" class="ring-1 ring-gray-900/10 dark:ring-white/10 shadow-2xl rounded-2xl object-cover h-60 sm:h-96 md:h-[36rem]" />
             </div>
         </div>
 
         <div class="bg-white dark:bg-gray-800 sm:text-center mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28 px-5">
-            <h1 class="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-4xl">
+            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-4xl">
                 Unsere gemeinsamen <span class="text-brand-primary">Aufgaben</span>
-            </h1>
+            </h2>
             <p class="mt-3 text-xl text-gray-500 dark:text-gray-400 max-w-5xl lg:max-w-4xl mx-auto sm:text-lg md:mt-5 md:text-xl">
                 Wir wissen, dass uns Gott zusammengeführt hat, denn ohne ihn hätten wir uns wohl nie kennengelernt. Wir sind ein buntes Gemisch von Menschen, die Villach und Umgebung mit dem Evangelium erreichen wollen.
             </p>
@@ -83,9 +84,9 @@
         <div class="relative py-16 mt-16 bg-gray-50 dark:bg-gray-900 overflow-hidden">
             <div class="relative px-4 sm:px-6 lg:px-8">
                 <div class="text-lg max-w-prose mx-auto">
-                    <h1 id="freie-christengemeinde" style="scroll-margin: 7rem">
+                    <h2 style="scroll-margin: 7rem">
                         <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Freie Christengemeinden Österreichs</span>
-                    </h1>
+                    </h2>
                     <p class="mt-8 text-xl text-gray-500 dark:text-gray-400 leading-8">Als Freie Christengemeinde – Pfingstgemeinde ist es uns ein Anliegen, den Menschen in unserem Land zu dienen, indem wir die gute Nachricht von Jesus Christus gesellschaftsrelevant verkündigen und praktizieren.</p>
                 </div>
                 <div class="mt-10 max-w-prose mx-auto rounded-2xl bg-white dark:bg-gray-800 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 px-6 py-8 sm:px-10">

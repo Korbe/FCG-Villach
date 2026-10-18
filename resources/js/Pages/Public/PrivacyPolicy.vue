@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Datenschutz">
+    <public-layout title="Datenschutzerklärung"
+        description="Datenschutzerklärung der FCG Villach: Informationen zu Datenverarbeitung, Cookies, Google Analytics und Ihren Rechten.">
 
         <Navbar />
 

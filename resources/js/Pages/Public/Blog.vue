@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Predigten">
+    <public-layout title="Predigten anhören"
+        description="Predigten der FCG Villach online anhören: Die neuesten Predigten aus unseren Gottesdiensten in Villach als Audio.">
 
         <div class="flex flex-col h-screen relative">
 

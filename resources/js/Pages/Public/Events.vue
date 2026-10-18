@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Events">
+    <public-layout title="Veranstaltungen & Gottesdienst"
+        description="Gottesdienst, Gemeindegebet, Heferl Café, Bibelstunde und Hauskreis: Alle Veranstaltungen der FCG Villach mit Terminen und Ansprechpartnern.">
         <Navbar />
 
         <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">
@@ -24,7 +25,7 @@
                         class="col-span-1 flex flex-col bg-white dark:bg-gray-700 rounded-2xl shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 divide-y divide-gray-100 dark:divide-gray-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                         <div class="w-full p-6">
                             <div class="flex justify-between">
-                                <h1 class="text-gray-900 dark:text-white text-xl font-semibold">{{ event.name }}</h1>
+                                <h2 class="text-gray-900 dark:text-white text-xl font-semibold">{{ event.name }}</h2>
                             </div>
                             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ event.description }}</p>
                             <div class="mt-5 space-y-3">

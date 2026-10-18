@@ -3,49 +3,126 @@
 
    <url>
       <loc>https://fcg-villach.at/</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
 
    <url>
       <loc>https://fcg-villach.at/about</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
+      <loc>https://fcg-villach.at/about/christian-korbitsch</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/erika-korbitsch</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/andrea-kirisits</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/markus-kirisits</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/majid-khosravian</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/maedeh-danialfar</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/tochukwu-udeh</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/about/natania-tochukwu</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
       <loc>https://fcg-villach.at/veranstaltungen</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
 
    <url>
       <loc>https://fcg-villach.at/heferlcafe</loc>
-      <lastmod>2026-09-04</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
       <loc>https://fcg-villach.at/predigten</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
 
    <url>
+      <loc>https://fcg-villach.at/predigten/archiv</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/impressum</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+
+   <url>
+      <loc>https://fcg-villach.at/datenschutz</loc>
+      <lastmod>2026-10-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+
+   <url>
       <loc>https://fcg-villach.at/kontakt</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
 
    <url>
       <loc>https://fcg-villach.at/spenden</loc>
-      <lastmod>2025-09-09</lastmod>
+      <lastmod>2026-10-18</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>

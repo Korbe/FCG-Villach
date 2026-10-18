@@ -1,5 +1,6 @@
 <template>
-    <public-layout title="Kontakt">
+    <public-layout title="Kontakt & Anfahrt"
+        description="Kontakt zur FCG Villach: Telefon, E-Mail und Anfahrt zur Vassacher Straße 28 in 9500 Villach. Wir freuen uns auf Sie.">
         <Navbar />
 
         <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-800">

@@ -66,5 +66,5 @@ Route::fallback(function () {
         abort(404);
     }
 
-    return Inertia::render('PageNotFound');
+    return Inertia::render('PageNotFound')->toResponse(request())->setStatusCode(404);
 });

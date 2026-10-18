@@ -1,10 +1,11 @@
 <template>
-    <public-layout title="Heferl Café">
+    <public-layout title="Heferl Café Villach"
+        description="Heferl Café in Villach: Jeden 1. Freitag im Monat von 14 bis 18 Uhr bei Torte und Kaffee, alles auf freiwillige Spende. Vassacher Straße 28.">
 
         <!-- Hero -->
         <div class="relative flex flex-col h-screen">
             <div class="absolute inset-0">
-                <img loading="lazy" alt="" class="w-full h-full object-cover"
+                <img alt="" class="w-full h-full object-cover"
                     :src="theme === 'dark' ? '/images/heferl/hero-dark.png' : '/images/heferl/hero-light.jpg'" />
                 <div aria-hidden="true" class="absolute inset-0 bg-black/50" />
             </div>
