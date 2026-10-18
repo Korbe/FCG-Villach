@@ -72,9 +72,9 @@ const team = [
         imageUrl: '/images/portraits/Maedeh-Danialfar.jpg',
     },
     {
-        name: 'Natania Tochi',
+        name: 'Natania Tochukwu',
         role: '',
-        imageUrl: '/images/portraits/Natania-Tochi.jpg',
+        imageUrl: '/images/portraits/Natania-Tochukwu.jpg',
     },
 ];
 

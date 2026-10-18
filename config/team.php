@@ -64,12 +64,12 @@ return [
         'phone' => '+4366565103133',
         'mail' => 'udehtochukwu66@gmail.com',
     ],
-    'natania-tochi' => [
-        'name' => 'Natania Tochi',
+    'natania-tochukwu' => [
+        'name' => 'Natania Tochukwu',
         'role' => '',
-        'imageUrl' => '/images/portraits/Natania-Tochi.jpg',
-        'lead' => '',
-        'bio' => '',
+        'imageUrl' => '/images/portraits/Natania-Tochukwu.jpg',
+        'lead' => 'Mein Name ist Natania Tochukwu, und ich komme aus Nigeria.',
+        'bio' => 'Seit ich nach Österreich gekommen bin und die Gottesdienste der FCG Villach besuche, habe ich so viel Liebe, Einheit und Gemeinschaft erfahren. Ich bin in einem Leben des Dienstes für Gott aufgewachsen und habe Ihm von klein auf gedient. Mein Leben ist im Glauben verwurzelt, und ich diene Gott weiterhin von ganzem Herzen. Mein Wunsch ist es, Ihm auch in Zukunft treu zu bleiben und meinen Glauben mit anderen Menschen zu teilen.',
         'phone' => '',
         'mail' => '',
     ],
